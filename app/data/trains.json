@@ -1,0 +1,39 @@
+[
+  {
+    "train_no": 101,
+    "train_name": "Local Express A",
+    "stops": [
+      { "station": "Central Station", "arrival": "06:00", "departure": "06:05" },
+      { "station": "North Station", "arrival": "06:20", "departure": "06:25" },
+      { "station": "East Station", "arrival": "06:50", "departure": "06:55" },
+      { "station": "West Station", "arrival": "07:20", "departure": "07:25" }
+    ]
+  },
+  {
+    "train_no": 102,
+    "train_name": "Local Express B",
+    "stops": [
+      { "station": "Central Station", "arrival": "07:00", "departure": "07:05" },
+      { "station": "South Station", "arrival": "07:30", "departure": "07:35" },
+      { "station": "East Station", "arrival": "08:00", "departure": "08:05" }
+    ]
+  },
+  {
+    "train_no": 103,
+    "train_name": "Local Express C",
+    "stops": [
+      { "station": "North Station", "arrival": "08:00", "departure": "08:05" },
+      { "station": "Central Station", "arrival": "08:30", "departure": "08:35" },
+      { "station": "West Station", "arrival": "09:00", "departure": "09:05" }
+    ]
+  },
+  {
+    "train_no": 104,
+    "train_name": "Local Express D",
+    "stops": [
+      { "station": "South Station", "arrival": "09:00", "departure": "09:05" },
+      { "station": "Central Station", "arrival": "09:30", "departure": "09:35" },
+      { "station": "East Station", "arrival": "10:00", "departure": "10:05" }
+    ]
+  }
+]

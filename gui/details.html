@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Route Details</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="navbar">
+            <a href="index.html" class="navbar-home-link">
+                <h1 id="app-title">TrainTrackr</h1>
+            </a>
+            <h2 style="font-size: 1.4em; color: var(--color-primary); margin: 0 0 0 -150px;">Route Details</h2>
+        </header>
+        <main class="simple-page">
+            <h2>🚆 Route Timeline & Analysis</h2>
+            <p>Viewing details for **Howrah–Bardhaman EMU Local**</p>
+            <div class="route-timeline">
+                <div class="timeline-content">
+                    <p>✅ Howrah (Departed 08:30)</p>
+                    <p>✅ Kolkata (Departed 08:45)</p>
+                    <p class="timeline-current">📍 Bandel (Current - +7 min delay)</p>
+                    <p>⬜ Bardhaman (ETA 10:05)</p>
+                    <p>⬜ Durgapur (ETA 11:30)</p>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 25px;">Delay Trend</h3>
+            <p class="delay-trend-visual">🟢 → 🟡 → 🔴</p> 
+
+            <h3 style="margin-top: 25px;">Crowd Trend Forecast</h3>
+            <p class="crowd-trend-visual"><span class="text-red">🔴 Heavy</span> → <span class="text-yellow">🟡 Medium</span> → <span class="text-green">🟢 Low</span></p>
+            
+            <a href="dashboard.html" class="details-button back-button" style="margin-top: 30px;">← Back to Dashboard</a>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,7 +1,6 @@
 from datetime import datetime
 
-# Example: local train delay heuristics
-# You can expand this with real local stats
+# Base delay (minutes) for known trains
 TRAIN_BASE_DELAYS = {
     101: 2,
     102: 5,
@@ -9,17 +8,23 @@ TRAIN_BASE_DELAYS = {
     104: 0,
 }
 
+
 def predict_delay(train_no: int) -> int:
     """
-    Predict delay for a local train using simple heuristics
-    """
-    base_delay = TRAIN_BASE_DELAYS.get(train_no, 3)  # default 3 min if unknown
+    Predict delay for a local train using simple heuristics.
 
-    # Additional logic: peak hours add more delay
+    Logic:
+    - Base delay per train (if known)
+    - Peak hour adjustment
+    """
+    if not isinstance(train_no, int):
+        raise ValueError("train_no must be an integer")
+
+    base_delay = TRAIN_BASE_DELAYS.get(train_no, 3)  # default if unknown
+
     hour = datetime.now().hour
-    if 7 <= hour <= 10 or 17 <= hour <= 20:
-        peak_delay = 5
-    else:
-        peak_delay = 0
+    is_peak_hour = (7 <= hour <= 10) or (17 <= hour <= 20)
+
+    peak_delay = 5 if is_peak_hour else 0
 
     return base_delay + peak_delay

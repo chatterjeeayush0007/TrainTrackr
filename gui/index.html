@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainTrackr - Your Smart Local Train Companion</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="landing-body">
+    <div id="start-screen">
+        <div class="landing-content">
+            <h1 class="landing-title">TrainTrackr</h1>
+            <p class="landing-tagline">Your Smart Local Train Companion</p>
+            
+            <div class="feature-cards">
+                <div class="feature-card">
+                    <h3>⏱️ Real-time Timings</h3>
+                    <p>See exactly where your train is now, updated live.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🔮 Smart Delay Predictions</h3>
+                    <p>Rule-based logic forecasts delays due to peak hours or weather.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🧭 Platform Info</h3>
+                    <p>Get predicted platform numbers before official announcements.</p>
+                </div>
+            </div>
+
+            <button class="start-button auth-trigger-button" onclick="openAuthModal()">
+                Get Started / Sign In
+            </button>
+        </div>
+    </div>
+
+    <div id="auth-modal" class="modal-overlay hidden">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeAuthModal()">&times;</span>
+            <h2 id="auth-title">Sign Up to Start Tracking</h2>
+            
+            <button class="google-signin-button" onclick="simulateGoogleSignIn()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Logo_and_tagline.png" alt="Google logo" style="width: 20px; height: 20px; margin-right: 10px;">
+                Sign Up with Google
+            </button>
+
+            <div class="divider">OR</div>
+
+            <form id="auth-form">
+                <div id="signup-fields">
+                    <input type="text" id="username" placeholder="Full Name" required>
+                </div>
+                
+                <input type="email" id="email" placeholder="Email Address" required>
+                <input type="password" id="password" placeholder="Password" required>
+                
+                <button type="submit" id="main-auth-button">Sign Up</button>
+            </form>
+
+            <p class="toggle-auth-link">
+                Already have an account? 
+                <a href="#" id="toggle-auth" onclick="toggleAuthMode(event)">Sign In</a>
+            </p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

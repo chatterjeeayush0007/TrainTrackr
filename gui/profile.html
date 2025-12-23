@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile & Settings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header class="navbar">
+            <a href="index.html" class="navbar-home-link">
+                <h1 id="app-title">TrainTrackr</h1>
+            </a>
+            <h2 style="font-size: 1.4em; color: var(--color-primary); margin: 0 0 0 -150px;">Settings</h2>
+        </header>
+        <main class="simple-page">
+            <h2>⚙️ Profile & Preferences</h2>
+            <div class="input-group">
+                <label>Home Station</label>
+                <input type="text" value="Howrah">
+            </div>
+            <div class="input-group" style="margin-top: 15px;">
+                <label>Daily Route</label>
+                <input type="text" value="Howrah to Bardhaman">
+            </div>
+            
+            <h3 style="margin-top: 20px;">Alert Preferences</h3>
+            <label><input type="checkbox" checked> Notify me of delays > 5 min</label><br>
+            <label><input type="checkbox"> Notify me of platform changes</label>
+
+            <a href="dashboard.html" class="details-button back-button" style="margin-top: 30px;">← Back to Dashboard</a>
+        </main>
+    </div>
+</body>
+</html>

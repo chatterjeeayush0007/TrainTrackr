@@ -1,9 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+import asyncio
 
-# -----------------------------
-# Create FastAPI app
-# -----------------------------
 app = FastAPI(
     title="TrainTrackr API",
     description="Backend for TrainTrackr local train utility app",
@@ -32,7 +30,7 @@ def root():
     }
 
 # -----------------------------
-# Include Routes
+# Include routers
 # -----------------------------
 # Trains
 try:
@@ -48,16 +46,32 @@ try:
 except ImportError as e:
     print("Stations route not loaded:", e)
 
-# Predictions (Delay)
+# Predictions
 try:
     from app.routes.predictions import router as predictions_router
     app.include_router(predictions_router)
 except ImportError as e:
     print("Predictions route not loaded:", e)
 
-# Crowd estimation
+# Crowd
 try:
     from app.routes.crowd import router as crowd_router
     app.include_router(crowd_router)
 except ImportError as e:
     print("Crowd route not loaded:", e)
+
+# Recommendations (new)
+try:
+    from app.routes.recommendations import router as recommendations_router
+    app.include_router(recommendations_router)
+except ImportError as e:
+    print("Recommendations route not loaded:", e)
+
+# -----------------------------
+# Background simulator
+# -----------------------------
+from app.utils.simulate_trains import run_simulator_forever
+
+@app.on_event("startup")
+async def start_background_simulator():
+    asyncio.create_task(run_simulator_forever(interval_seconds=60))

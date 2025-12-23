@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrainTrackr - Live Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header id="navbar" class="navbar">
+            <a href="index.html" class="navbar-home-link">
+                <h1 id="app-title">TrainTrackr</h1>
+            </a>
+            <div class="status-section">
+                <span id="current-station" class="current-station">Station: **Howrah**</span>
+                <div id="overall-status-dot" class="status-dot status-red">
+                    🔴 Delayed
+                </div>
+            </div>
+            <a href="profile.html" class="profile-button">⚙️</a>
+        </header>
+
+        <main>
+            <div id="home-screen">
+                <form id="search-form">
+                    <div class="input-group">
+                        <label for="from-station">From Station</label>
+                        <select id="from-station"></select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="to-station">To Station</label>
+                        <select id="to-station"></select>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="desired-time-input">Desired Time (HH:MM)</label>
+                        <input type="time" id="desired-time-input" required>
+                    </div>
+                    
+                    <button type="submit" id="search-button">Search Train</button>
+                </form>
+
+                <div id="results-container"></div>
+
+                <div class="controls-section">
+                    <h4>Safety & Alerts</h4>
+                    <div class="button-group">
+                        <button class="emergency-button" onclick="alert('🚨 Emergency Alert Activated!')">
+                            🚨 Emergency Alert
+                        </button>
+                        <button class="report-button" onclick="alert('🧍 Fall / Injury Report Submitted.')">
+                            🧍 Fall / Injury Report
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

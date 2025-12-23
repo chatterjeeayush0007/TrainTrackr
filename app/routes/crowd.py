@@ -10,29 +10,40 @@ router = APIRouter(
 
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "trains.json"
 
-@router.get("/{station}")
-def estimate_crowd(station: str):
-    """
-    Estimate crowd at a station based on train arrivals
-    """
+
+def load_trains():
     if not DATA_PATH.exists():
         raise HTTPException(status_code=500, detail="trains.json not found")
 
     with open(DATA_PATH, "r", encoding="utf-8") as f:
-        trains = json.load(f)
+        data = json.load(f)
 
-    now = datetime.now()
-    hour = now.hour
+    if not isinstance(data, list):
+        raise HTTPException(status_code=500, detail="Invalid trains data format")
 
-    # Count trains stopping at this station in peak vs off-peak
+    return data
+
+
+@router.get("/{station}")
+def estimate_crowd(station: str):
+    """
+    Estimate crowd at a station based on train frequency and time of day
+    """
+    trains = load_trains()
+    hour = datetime.now().hour
+
     count = 0
     for train in trains:
         for stop in train.get("stops", []):
             if stop.get("station", "").lower() == station.lower():
                 count += 1
 
-    # Simple logic: more trains = more crowd
-    if 7 <= hour <= 10 or 17 <= hour <= 20:
+    if count == 0:
+        raise HTTPException(status_code=404, detail="Station not found")
+
+    is_peak = (7 <= hour <= 10) or (17 <= hour <= 20)
+
+    if is_peak:
         level = "High" if count >= 2 else "Medium"
     else:
         level = "Medium" if count >= 1 else "Low"

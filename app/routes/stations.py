@@ -10,22 +10,30 @@ router = APIRouter(
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "trains.json"
 
 
-@router.get("/")
-def get_all_stations():
-    """
-    Returns unique list of stations from trains.json
-    """
+def load_trains():
     if not DATA_PATH.exists():
         raise HTTPException(status_code=500, detail="trains.json not found")
 
     with open(DATA_PATH, "r", encoding="utf-8") as f:
         data = json.load(f)
 
-    stations = set()
+    if not isinstance(data, list):
+        raise HTTPException(status_code=500, detail="Invalid trains data format")
 
+    return data
+
+
+@router.get("/")
+def get_all_stations():
+    """Returns unique list of stations"""
+    data = load_trains()
+
+    stations = set()
     for train in data:
         for stop in train.get("stops", []):
-            stations.add(stop.get("station"))
+            station = stop.get("station")
+            if station:
+                stations.add(station)
 
     return {
         "count": len(stations),
@@ -35,15 +43,11 @@ def get_all_stations():
 
 @router.get("/search")
 def search_station(q: str):
-    """
-    Search station by name
-    """
+    """Search station by name"""
     if not q:
         raise HTTPException(status_code=400, detail="Query parameter 'q' is required")
 
-    with open(DATA_PATH, "r", encoding="utf-8") as f:
-        data = json.load(f)
-
+    data = load_trains()
     results = set()
 
     for train in data:

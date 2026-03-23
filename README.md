@@ -29,17 +29,30 @@ TrainTrackr is a **smart transit companion** that provides **local train schedul
 TrainTrackr/
 ├── app/
 │   ├── main.py
-│   ├── data/trains.json
+│   ├── data/
+│   │   └── trains.json
 │   ├── routes/
 │   │   ├── trains.py
 │   │   ├── stations.py
+│   │   ├── recommendations.py
 │   │   ├── predictions.py
 │   │   └── crowd.py
 │   ├── utils/
 │   │   ├── delay_predict.py
-│   │   └── time_calc.py
+│   │   ├── simulate_trains.py
+│   │   ├── time_calc.py
+│   │   └── train_assistant_logic.py
 │   ├── models.py
+│   ├── train_assistant.py
 │   └── schemas.py
+├── gui/
+│   ├── dashboard.html
+│   ├── details.html
+│   ├── index.html
+│   ├── profile.html
+│   ├── script.js
+│   ├── style.css
+│   └── train.assistant.js
 ├── README.md
 └── requirements.txt
 ```

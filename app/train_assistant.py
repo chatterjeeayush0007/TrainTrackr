@@ -1,4 +1,4 @@
-import requests
+import requests  #pyright: ignore[reportMissingModuleSource]
 from datetime import datetime, timedelta
 
 BASE_URL = "http://127.0.0.1:8000"

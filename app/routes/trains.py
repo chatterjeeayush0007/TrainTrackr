@@ -1,4 +1,4 @@
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException # pyright: ignore[reportMissingImports]
 import json
 from pathlib import Path
 

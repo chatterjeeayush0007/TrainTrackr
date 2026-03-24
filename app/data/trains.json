@@ -74,11 +74,11 @@
         "departure": "08:45"
       }
     ],
-    "delay": 7,
-    "current_station": "Titagarh",
-    "current_index": 7,
-    "expected_arrival": "08:19",
-    "expected_departure": "08:20"
+    "delay": -2,
+    "current_station": "Barrackpore",
+    "current_index": 8,
+    "expected_arrival": "08:16",
+    "expected_departure": "08:17"
   },
   {
     "train_no": 31335,
@@ -190,11 +190,11 @@
         "departure": "08:00"
       }
     ],
-    "delay": 6,
-    "current_station": "Kankinara",
-    "current_index": 13,
-    "expected_arrival": "07:24",
-    "expected_departure": "07:25"
+    "delay": 7,
+    "current_station": "Naihati",
+    "current_index": 14,
+    "expected_arrival": "07:29",
+    "expected_departure": "07:31"
   },
   {
     "train_no": 31438,
@@ -271,11 +271,11 @@
         "departure": null
       }
     ],
-    "delay": 9,
-    "current_station": "Sealdah",
-    "current_index": 13,
-    "expected_arrival": "08:14",
-    "expected_departure": "00:09"
+    "delay": -1,
+    "current_station": "Naihati",
+    "current_index": 0,
+    "expected_arrival": "06:59",
+    "expected_departure": "07:01"
   },
   {
     "train_no": 31316,
@@ -387,10 +387,10 @@
         "departure": null
       }
     ],
-    "delay": 8,
-    "current_station": "Titagarh",
-    "current_index": 13,
-    "expected_arrival": "08:11",
-    "expected_departure": "08:12"
+    "delay": -2,
+    "current_station": "Khardha",
+    "current_index": 14,
+    "expected_arrival": "08:05",
+    "expected_departure": "08:06"
   }
 ]

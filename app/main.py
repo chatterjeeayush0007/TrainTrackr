@@ -1,7 +1,11 @@
-from fastapi import FastAPI # pyright: ignore[reportMissingImports]
-from fastapi.middleware.cors import CORSMiddleware # pyright: ignore[reportMissingImports]
+# app/main.py
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 
+# -----------------------------
+# FastAPI app
+# -----------------------------
 app = FastAPI(
     title="TrainTrackr API",
     description="Backend for TrainTrackr local train utility app",
@@ -9,11 +13,11 @@ app = FastAPI(
 )
 
 # -----------------------------
-# Enable CORS for frontend
+# Enable CORS
 # -----------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # change in production
+    allow_origins=["*"],  # Allow all origins (change in production)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -32,40 +36,25 @@ def root():
 # -----------------------------
 # Include routers
 # -----------------------------
+from app.routes import trains, stations, predictions, recommendations, users, railradar
+
 # Trains
-try:
-    from app.routes.trains import router as trains_router
-    app.include_router(trains_router)
-except ImportError as e:
-    print("Trains route not loaded:", e)
+app.include_router(trains.router)
 
 # Stations
-try:
-    from app.routes.stations import router as stations_router
-    app.include_router(stations_router)
-except ImportError as e:
-    print("Stations route not loaded:", e)
+app.include_router(stations.router)
 
 # Predictions
-try:
-    from app.routes.predictions import router as predictions_router
-    app.include_router(predictions_router)
-except ImportError as e:
-    print("Predictions route not loaded:", e)
+app.include_router(predictions.router)
 
-# Crowd
-try:
-    from app.routes.crowd import router as crowd_router
-    app.include_router(crowd_router)
-except ImportError as e:
-    print("Crowd route not loaded:", e)
+# Recommendations
+app.include_router(recommendations.router)
 
-# Recommendations (new)
-try:
-    from app.routes.recommendations import router as recommendations_router
-    app.include_router(recommendations_router)
-except ImportError as e:
-    print("Recommendations route not loaded:", e)
+# Users
+app.include_router(users.router)
+
+# RailRadar
+app.include_router(railradar.router, prefix="/railradar", tags=["RailRadar"])
 
 # -----------------------------
 # Background simulator

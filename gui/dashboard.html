@@ -1,65 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TrainTrackr - Live Dashboard</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TrainTrackr Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(45deg, #1e3a8a, #10b981, #3b82f6, #22c55e);
+    color: #fff;
+    min-height: 100vh;
+    background-size: 300% 300%;
+    animation: gradientBG 8s ease infinite;
+}
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.dashboard-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    color: #1e293b;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+h1 { text-align: center; color: #1e3a8a; }
+
+.train-card {
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    background: #f1f5f9;
+}
+
+.train-card h3 { margin: 0; color: #1e3a8a; }
+.train-card p { margin: 5px 0; }
+
+.crowd-low { color: green; font-weight: bold; }
+.crowd-medium { color: orange; font-weight: bold; }
+.crowd-high { color: red; font-weight: bold; }
+
+.no-trains {
+    text-align: center;
+    font-weight: bold;
+    color: #111827; /* dark color */
+    padding: 30px 0;
+}
+</style>
 </head>
 <body>
-    <div id="app">
-        <header id="navbar" class="navbar">
-            <a href="index.html" class="navbar-home-link">
-                <h1 id="app-title">TrainTrackr</h1>
-            </a>
-            <div class="status-section">
-                <span id="current-station" class="current-station">Station: **Howrah**</span>
-                <div id="overall-status-dot" class="status-dot status-red">
-                    🔴 Delayed
-                </div>
-            </div>
-            <a href="profile.html" class="profile-button">⚙️</a>
-        </header>
+<div class="dashboard-container">
+    <h1>Train Details</h1>
+    <div id="trains-list"></div>
+</div>
 
-        <main>
-            <div id="home-screen">
-                <form id="search-form">
-                    <div class="input-group">
-                        <label for="from-station">From Station</label>
-                        <select id="from-station"></select>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="to-station">To Station</label>
-                        <select id="to-station"></select>
-                    </div>
-                    
-                    <div class="input-group">
-                        <label for="desired-time-input">Desired Time (HH:MM)</label>
-                        <input type="time" id="desired-time-input" required>
-                    </div>
-                    
-                    <button type="submit" id="search-button">Search Train</button>
-                </form>
+<script>
+const trains = JSON.parse(localStorage.getItem('trainData')) || [];
+const container = document.getElementById('trains-list');
 
-                <div id="results-container"></div>
-
-                <div class="controls-section">
-                    <h4>Safety & Alerts</h4>
-                    <div class="button-group">
-                        <button class="emergency-button" onclick="alert('🚨 Emergency Alert Activated!')">
-                            🚨 Emergency Alert
-                        </button>
-                        <button class="report-button" onclick="alert('🧍 Fall / Injury Report Submitted.')">
-                            🧍 Fall / Injury Report
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-
-    <script src="script.js"></script>
+if (trains.length === 0) {
+    const msg = document.createElement('div');
+    msg.className = "no-trains";
+    msg.textContent = "No Trains Available!";
+    container.appendChild(msg);
+} else {
+    trains.forEach(train => {
+        const div = document.createElement('div');
+        div.className = "train-card";
+        div.innerHTML = `
+            <h3>${train.name}</h3>
+            <p>ETA: ${train.eta} | ETD: ${train.etd}</p>
+            <p>Crowd Level: <span class="crowd-${train.crowd}">${train.crowd.toUpperCase()}</span></p>
+        `;
+        container.appendChild(div);
+    });
+}
+</script>
 </body>
 </html>

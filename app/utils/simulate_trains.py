@@ -1,3 +1,5 @@
+# app/utils/simulate_trains.py
+
 import json
 import random
 from pathlib import Path
@@ -7,10 +9,15 @@ import asyncio
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "trains.json"
 
 def parse_time(time_str):
-    """Parse HH:MM string to datetime today"""
+    """Parse HH:MM string to datetime today. Defaults to 00:00 if missing."""
     now = datetime.now()
-    hour, minute = map(int, time_str.split(":"))
-    return now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    if not time_str or not isinstance(time_str, str):
+        return now.replace(hour=0, minute=0, second=0, microsecond=0)
+    try:
+        hour, minute = map(int, time_str.split(":"))
+        return now.replace(hour=hour, minute=minute, second=0, microsecond=0)
+    except ValueError:
+        return now.replace(hour=0, minute=0, second=0, microsecond=0)
 
 def format_time(dt):
     return dt.strftime("%H:%M")
@@ -35,14 +42,14 @@ def simulate_live_trains():
         # Move to next stop (circular)
         train["current_index"] = (train["current_index"] + 1) % len(stops)
         current_stop = stops[train["current_index"]]
-        train["current_station"] = current_stop["station"]
+        train["current_station"] = current_stop.get("station", "Unknown")
 
         # Random delay (-2 to +10 minutes)
         train["delay"] = random.randint(-2, 10)
 
         # Calculate expected arrival/departure using scheduled times + delay
-        scheduled_arrival = parse_time(current_stop["arrival"])
-        scheduled_departure = parse_time(current_stop["departure"])
+        scheduled_arrival = parse_time(current_stop.get("arrival"))
+        scheduled_departure = parse_time(current_stop.get("departure"))
         train["expected_arrival"] = format_time(scheduled_arrival + timedelta(minutes=train["delay"]))
         train["expected_departure"] = format_time(scheduled_departure + timedelta(minutes=train["delay"]))
 

@@ -1,40 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Route Details</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TrainTrackr - Journey Details</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    form { max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 10px; }
+    input, select, button { padding: 8px; width: 100%; }
+    .output { margin-top: 20px; }
+  </style>
 </head>
 <body>
-    <div id="app">
-        <header class="navbar">
-            <a href="index.html" class="navbar-home-link">
-                <h1 id="app-title">TrainTrackr</h1>
-            </a>
-            <h2 style="font-size: 1.4em; color: var(--color-primary); margin: 0 0 0 -150px;">Route Details</h2>
-        </header>
-        <main class="simple-page">
-            <h2>🚆 Route Timeline & Analysis</h2>
-            <p>Viewing details for **Howrah–Bardhaman EMU Local**</p>
-            <div class="route-timeline">
-                <div class="timeline-content">
-                    <p>✅ Howrah (Departed 08:30)</p>
-                    <p>✅ Kolkata (Departed 08:45)</p>
-                    <p class="timeline-current">📍 Bandel (Current - +7 min delay)</p>
-                    <p>⬜ Bardhaman (ETA 10:05)</p>
-                    <p>⬜ Durgapur (ETA 11:30)</p>
-                </div>
-            </div>
+  <h1>Enter Your Journey Details</h1>
 
-            <h3 style="margin-top: 25px;">Delay Trend</h3>
-            <p class="delay-trend-visual">🟢 → 🟡 → 🔴</p> 
+  <form id="journey-form">
+    <input type="text" id="username" placeholder="Username or Email" required>
+    <input type="text" id="pincode" placeholder="Your Area Pincode" required>
+    <select id="passenger_type" required>
+      <option value="">Passenger Type</option>
+      <option value="daily">Daily</option>
+      <option value="occasional">Occasional</option>
+    </select>
+    <select id="ticket_type" required>
+      <option value="">Ticket Type</option>
+      <option value="single">Single</option>
+      <option value="monthly">Monthly</option>
+    </select>
+    <input type="date" id="from_date" placeholder="Start Date">
+    <input type="date" id="to_date" placeholder="End Date">
+    <input type="time" id="journey_time" placeholder="Journey Time" required>
+    <input type="text" id="source_station" placeholder="Source Station (optional)">
+    <input type="text" id="destination_station" placeholder="Destination Station" required>
+    <button type="submit">Save Journey</button>
+  </form>
 
-            <h3 style="margin-top: 25px;">Crowd Trend Forecast</h3>
-            <p class="crowd-trend-visual"><span class="text-red">🔴 Heavy</span> → <span class="text-yellow">🟡 Medium</span> → <span class="text-green">🟢 Low</span></p>
-            
-            <a href="dashboard.html" class="details-button back-button" style="margin-top: 30px;">← Back to Dashboard</a>
-        </main>
-    </div>
+  <div class="output" id="output"></div>
+  <ul id="nearest-stations"></ul>
+
+  <script>
+    const form = document.getElementById("journey-form");
+    const output = document.getElementById("output");
+    const nearestUl = document.getElementById("nearest-stations");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const payload = {
+        username: document.getElementById("username").value,
+        pincode: document.getElementById("pincode").value,
+        passenger_type: document.getElementById("passenger_type").value,
+        ticket_type: document.getElementById("ticket_type").value,
+        from_date: document.getElementById("from_date").value || null,
+        to_date: document.getElementById("to_date").value || null,
+        journey_time: document.getElementById("journey_time").value,
+        source_station: document.getElementById("source_station").value || null,
+        destination_station: document.getElementById("destination_station").value
+      };
+
+      try {
+        const res = await fetch("http://127.0.0.1:8000/users/details", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await res.json();
+
+        if (!res.ok) {
+          output.innerHTML = `<p style="color:red;">Error: ${data.detail}</p>`;
+          return;
+        }
+
+        output.innerHTML = `
+          <p style="color:green;">${data.message}</p>
+          <p>Predicted Crowd: ${data.predicted_crowd ?? "N/A"}</p>
+        `;
+
+        nearestUl.innerHTML = "";
+        (data.nearest_stations || []).forEach(s => {
+          const li = document.createElement("li");
+          li.textContent = `${s.name} (${s.distance_km.toFixed(2)} km)`;
+          nearestUl.appendChild(li);
+        });
+
+      } catch (err) {
+        console.error(err);
+        output.innerHTML = `<p style="color:red;">Request failed. Check console.</p>`;
+      }
+    });
+  </script>
 </body>
 </html>

@@ -1,152 +1,123 @@
-const BASE_URL = "http://127.0.0.1:8000";
-
-// ----------------- AUTH MODAL -----------------
-function openAuthModal() {
-    document.getElementById("auth-modal").classList.remove("hidden");
-}
-function closeAuthModal() {
-    document.getElementById("auth-modal").classList.add("hidden");
-}
-function toggleAuthMode(e) {
-    e.preventDefault();
-    const title = document.getElementById("auth-title");
-    const button = document.getElementById("main-auth-button");
-    if (title.innerText.includes("Sign Up")) {
-        title.innerText = "Sign In to Your Account";
-        button.innerText = "Sign In";
-        document.getElementById("signup-fields").style.display = "none";
-    } else {
-        title.innerText = "Sign Up to Start Tracking";
-        button.innerText = "Sign Up";
-        document.getElementById("signup-fields").style.display = "block";
-    }
-}
-function simulateGoogleSignIn() {
-    alert("Simulated Google Sign In successful!");
-    window.location.href = "dashboard.html";
-}
-
-// ----------------- DASHBOARD / TRAIN SEARCH -----------------
-async function fetchStations() {
-    const resp = await fetch(`${BASE_URL}/stations/`);
-    if (!resp.ok) throw new Error("Could not fetch stations");
-    const data = await resp.json();
-    return data.stations;
-}
-
+// -----------------------------
+// Fetch all trains with crowd (for dashboard)
+// -----------------------------
 async function fetchTrains() {
-    const resp = await fetch(`${BASE_URL}/trains/`);
-    if (!resp.ok) throw new Error("Could not fetch trains");
-    const data = await resp.json();
-    return data.trains;
-}
+    try {
+        const res = await fetch("http://127.0.0.1:8000/predictions/all");
+        const data = await res.json();
 
-async function getTrainRoute(train_no) {
-    const resp = await fetch(`${BASE_URL}/trains/${train_no}/route`);
-    if (!resp.ok) throw new Error("Could not fetch route");
-    return await resp.json();
-}
+        const tbody = document.querySelector("#trains-table tbody");
+        if (!tbody) return; // Only for dashboard page
+        tbody.innerHTML = ""; // clear old rows
 
-async function getDelay(train_no) {
-    const resp = await fetch(`${BASE_URL}/predictions/delay/${train_no}`);
-    if (!resp.ok) throw new Error("Could not get delay");
-    const data = await resp.json();
-    return data.predicted_delay_minutes;
-}
-
-async function getCrowd(station) {
-    const resp = await fetch(`${BASE_URL}/crowd/${station}`);
-    if (!resp.ok) throw new Error("Could not get crowd");
-    const data = await resp.json();
-    return data.crowd_level;
-}
-
-const CROWD_SCORE = { "Low": 0, "Medium": 1, "High": 2 };
-
-async function findBestTrain(start, dest, time) {
-    const arrivalDt = new Date();
-    const [hours, minutes] = time.split(":");
-    arrivalDt.setHours(parseInt(hours), parseInt(minutes));
-
-    const trains = await fetchTrains();
-    const crowd = await getCrowd(start);
-    const crowdPenalty = CROWD_SCORE[crowd] ?? 1;
-    let candidates = [];
-
-    for (let train of trains) {
-        const route = await getTrainRoute(train.train_no);
-        const stops = route.stops;
-
-        const startIndex = stops.findIndex(s => s.station.toLowerCase() === start.toLowerCase());
-        const destIndex = stops.findIndex(s => s.station.toLowerCase() === dest.toLowerCase());
-        if (startIndex === -1 || destIndex === -1 || startIndex >= destIndex) continue;
-
-        const delay = await getDelay(train.train_no);
-        const scheduledArrival = new Date();
-        const [sh, sm] = stops[destIndex].arrival.split(":");
-        scheduledArrival.setHours(sh, sm);
-
-        const expectedArrival = new Date(scheduledArrival.getTime() + delay * 60000);
-        const timeDiff = Math.floor((expectedArrival - arrivalDt)/60000);
-
-        candidates.push({
-            train_no: train.train_no,
-            train_name: train.train_name,
-            expected_arrival: expectedArrival,
-            delay,
-            time_diff: timeDiff,
-            crowd,
-            crowd_penalty: crowdPenalty
+        data.trains.forEach(train => {
+            const row = document.createElement("tr");
+            row.innerHTML = `
+                <td>${train.train_no}</td>
+                <td>${train.train_name}</td>
+                <td>${train.current_station}</td>
+                <td>${train.expected_arrival}</td>
+                <td>${train.expected_departure}</td>
+                <td>${train.predicted_delay_minutes}</td>
+                <td>${train.status}</td>
+                <td>${train.predicted_crowd ?? "N/A"}</td>
+            `;
+            tbody.appendChild(row);
         });
+    } catch (err) {
+        console.error("Error fetching trains:", err);
     }
-
-    if (candidates.length === 0) return null;
-    const onTime = candidates.filter(c => c.time_diff <= 0);
-    if (onTime.length > 0) return onTime.reduce((a,b) => (a.crowd_penalty < b.crowd_penalty ? a : b));
-    return candidates.reduce((a,b) => (a.crowd_penalty < b.crowd_penalty ? a : b));
 }
 
-// ----------------- Populate select inputs -----------------
-document.addEventListener("DOMContentLoaded", async () => {
-    const stations = await fetchStations();
-    const fromSelect = document.getElementById("from-station");
-    const toSelect = document.getElementById("to-station");
-    stations.forEach(s => {
-        const opt1 = document.createElement("option");
-        opt1.value = s; opt1.text = s;
-        fromSelect.appendChild(opt1);
-        const opt2 = document.createElement("option");
-        opt2.value = s; opt2.text = s;
-        toSelect.appendChild(opt2);
-    });
-});
+// -----------------------------
+// Save user journey details (details page)
+// -----------------------------
+async function saveJourneyDetails(event) {
+    event.preventDefault();
 
-// ----------------- Search form submit -----------------
-document.getElementById("search-form").addEventListener("submit", async e => {
-    e.preventDefault();
-    const start = document.getElementById("from-station").value;
-    const dest = document.getElementById("to-station").value;
-    const time = document.getElementById("desired-time-input").value;
+    const payload = {
+        username: document.getElementById("username").value,
+        pincode: document.getElementById("pincode").value,
+        passenger_type: document.getElementById("passenger_type").value,
+        ticket_type: document.getElementById("ticket_type").value,
+        from_date: document.getElementById("from_date").value || null,
+        to_date: document.getElementById("to_date").value || null,
+        journey_time: document.getElementById("journey_time").value,
+        source_station: document.getElementById("source_station").value || null,
+        destination_station: document.getElementById("destination_station").value
+    };
 
-    const resultsDiv = document.getElementById("results-container");
-    resultsDiv.innerHTML = "Searching...";
+    const output = document.getElementById("output");
+    const nearestUl = document.getElementById("nearest-stations");
 
     try {
-        const best = await findBestTrain(start, dest, time);
-        if (!best) {
-            resultsDiv.innerHTML = "<p class='error'>No trains found for this route</p>";
+        const res = await fetch("http://127.0.0.1:8000/users/details", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+
+        if (!res.ok) {
+            output.innerHTML = `<p style="color:red;">Error: ${data.detail}</p>`;
             return;
         }
-        resultsDiv.innerHTML = `
-            <h3>📌 Recommended Train</h3>
-            <p>Train No: ${best.train_no}</p>
-            <p>Train Name: ${best.train_name}</p>
-            <p>Expected Arrival: ${best.expected_arrival.getHours().toString().padStart(2,'0')}:${best.expected_arrival.getMinutes().toString().padStart(2,'0')}</p>
-            <p>Delay: ${best.delay} min</p>
-            <p>Crowd Level: ${best.crowd}</p>
+
+        output.innerHTML = `
+            <p style="color:green;">${data.message}</p>
+            <p>Predicted Crowd: ${data.predicted_crowd ?? "N/A"}</p>
         `;
-    } catch(err) {
-        resultsDiv.innerHTML = "<p class='error'>Error fetching train data</p>";
+
+        nearestUl.innerHTML = "";
+        (data.nearest_stations || []).forEach(s => {
+            const li = document.createElement("li");
+            li.textContent = `${s.name} (${s.distance_km.toFixed(2)} km)`;
+            nearestUl.appendChild(li);
+        });
+
+    } catch (err) {
         console.error(err);
+        output.innerHTML = `<p style="color:red;">Request failed. Check console.</p>`;
     }
+}
+
+// -----------------------------
+// Find nearest stations (details page)
+// -----------------------------
+async function findNearestStations() {
+    const pincode = document.getElementById("pincode").value;
+    if (!pincode) return alert("Enter pincode!");
+
+    try {
+        const res = await fetch(`http://127.0.0.1:8000/users/nearest_stations?pincode=${pincode}`);
+        const stations = await res.json();
+
+        const ul = document.getElementById("nearest-stations");
+        if (!ul) return;
+        ul.innerHTML = "";
+
+        stations.forEach(s => {
+            const li = document.createElement("li");
+            li.textContent = `${s.name} (${s.distance_km.toFixed(2)} km)`;
+            ul.appendChild(li);
+        });
+    } catch (err) {
+        console.error("Error fetching nearest stations:", err);
+    }
+}
+
+// -----------------------------
+// Event listeners
+// -----------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const journeyForm = document.getElementById("journey-form");
+    if (journeyForm) journeyForm.addEventListener("submit", saveJourneyDetails);
+
+    const findStationsBtn = document.getElementById("find-stations");
+    if (findStationsBtn) findStationsBtn.addEventListener("click", findNearestStations);
+
+    // Initial load for dashboard table
+    fetchTrains();
+    // Auto-refresh every minute
+    setInterval(fetchTrains, 60000);
 });

@@ -1,7 +1,7 @@
 [
   {
     "train_no": 31439,
-    "train_name": "Sealdah - Naihsti Local",
+    "train_name": "Sealdah - Naihati Local",
     "stops": [
       {
         "station": "Sealdah",
@@ -34,17 +34,17 @@
         "departure": "07:59"
       },
       {
-        "station": "Khardha",
+        "station": "Khardaha",
         "arrival": "08:05",
         "departure": "08:07"
       },
       {
-        "station": "Titagargh",
+        "station": "Titagarh",
         "arrival": "08:12",
         "departure": "08:13"
       },
       {
-        "station": "Brrackpore",
+        "station": "Barrackpore",
         "arrival": "08:18",
         "departure": "08:19"
       },
@@ -74,11 +74,11 @@
         "departure": "08:45"
       }
     ],
-    "delay": 7,
-    "current_station": "West Station",
-    "current_index": 3,
-    "expected_arrival": "07:27",
-    "expected_departure": "07:32"
+    "delay": 0,
+    "current_station": "Palta",
+    "current_index": 9,
+    "expected_arrival": "08:22",
+    "expected_departure": "08:23"
   },
   {
     "train_no": 102,
@@ -101,10 +101,10 @@
       }
     ],
     "delay": 9,
-    "current_station": "East Station",
-    "current_index": 2,
-    "expected_arrival": "08:09",
-    "expected_departure": "08:14"
+    "current_station": "South Station",
+    "current_index": 1,
+    "expected_arrival": "07:39",
+    "expected_departure": "07:44"
   },
   {
     "train_no": 103,
@@ -126,11 +126,11 @@
         "departure": "09:05"
       }
     ],
-    "delay": 5,
-    "current_station": "West Station",
-    "current_index": 2,
-    "expected_arrival": "09:05",
-    "expected_departure": "09:10"
+    "delay": 6,
+    "current_station": "Central Station",
+    "current_index": 1,
+    "expected_arrival": "08:36",
+    "expected_departure": "08:41"
   },
   {
     "train_no": 104,
@@ -152,10 +152,10 @@
         "departure": "10:05"
       }
     ],
-    "delay": 2,
-    "current_station": "East Station",
-    "current_index": 2,
-    "expected_arrival": "10:02",
-    "expected_departure": "10:07"
+    "delay": 1,
+    "current_station": "Central Station",
+    "current_index": 1,
+    "expected_arrival": "09:31",
+    "expected_departure": "09:36"
   }
 ]

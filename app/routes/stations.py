@@ -7,8 +7,8 @@ router = APIRouter(
     tags=["Stations"]
 )
 
+# Path to trains.json
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "trains.json"
-
 
 def load_trains():
     if not DATA_PATH.exists():
@@ -22,12 +22,10 @@ def load_trains():
 
     return data
 
-
 @router.get("/")
 def get_all_stations():
     """Returns unique list of stations"""
     data = load_trains()
-
     stations = set()
     for train in data:
         for stop in train.get("stops", []):
@@ -40,26 +38,21 @@ def get_all_stations():
         "stations": sorted(stations)
     }
 
-
 @router.get("/search")
-def search_station(q: str):
-    """Search station by name"""
-    if not q:
-        raise HTTPException(status_code=400, detail="Query parameter 'q' is required")
+def search_stations(query: str = ""):
+    """
+    Search stations by name.
+    Returns empty list if query is empty (frontend-safe).
+    """
+    if not query.strip():
+        return {"stations": []}  # prevent 422 for empty input
 
     data = load_trains()
     results = set()
-
     for train in data:
         for stop in train.get("stops", []):
             station = stop.get("station", "")
-            if q.lower() in station.lower():
+            if query.lower() in station.lower():
                 results.add(station)
 
-    if not results:
-        raise HTTPException(status_code=404, detail="No stations found")
-
-    return {
-        "query": q,
-        "results": sorted(results)
-    }
+    return {"stations": sorted(results)}

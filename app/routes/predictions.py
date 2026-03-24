@@ -1,6 +1,6 @@
 # app/routes/predictions.py
 
-from fastapi import APIRouter, HTTPException  # pyright: ignore[reportMissingImports]
+from fastapi import APIRouter, HTTPException, Query  # pyright: ignore[reportMissingImports]
 from datetime import datetime, timedelta
 import json
 from pathlib import Path
@@ -27,7 +27,7 @@ def load_trains():
 
 
 @router.get("/delay/{train_no}")
-def delay_prediction(train_no: int):
+def delay_prediction(train_no: int, pincode: str = Query(None, description="Optional pincode for crowd estimation")):
     """
     Return live delay, current station, expected arrival/departure for a train
     Falls back to heuristic predict_delay() if delay not available
@@ -60,7 +60,7 @@ def delay_prediction(train_no: int):
 
     # Crowd prediction using CrowdPredictor
     predictor = CrowdPredictor(users_collection)
-    predicted_crowd = predictor.predict_crowd_for_train(train_no)
+    predicted_crowd = predictor.predict_crowd_for_train(train_no, pincode=pincode)
 
     return {
         "train_no": train_no,
@@ -75,7 +75,7 @@ def delay_prediction(train_no: int):
 
 
 @router.get("/all")
-def all_trains_with_crowd():
+def all_trains_with_crowd(pincode: str = Query(None, description="Optional pincode for crowd estimation")):
     """
     Return all trains with predicted delay and estimated crowd
     Useful for dashboard
@@ -90,7 +90,8 @@ def all_trains_with_crowd():
         status = "On Time" if delay_minutes <= 5 else "Delayed"
         expected_arrival = t.get("expected_arrival") or (datetime.now() + timedelta(minutes=delay_minutes)).strftime("%H:%M")
         expected_departure = t.get("expected_departure") or (datetime.now() + timedelta(minutes=delay_minutes + 5)).strftime("%H:%M")
-        predicted_crowd = predictor.predict_crowd_for_train(train_no)
+
+        predicted_crowd = predictor.predict_crowd_for_train(train_no, pincode=pincode)
 
         results.append({
             "train_no": train_no,

@@ -1,7 +1,7 @@
 [
   {
     "train_no": 31439,
-    "train_name": "Sealdah - Naihsti Local",
+    "train_name": "Sealdah - Naihati Local",
     "stops": [
       {
         "station": "Sealdah",
@@ -39,7 +39,7 @@
         "departure": "08:07"
       },
       {
-        "station": "Titagargh",
+        "station": "Titagarh",
         "arrival": "08:12",
         "departure": "08:13"
       },
@@ -81,23 +81,113 @@
     "expected_departure": "07:32"
   },
   {
-    "train_no": 102,
-    "train_name": "Local Express B",
+    "train_no": 31335,
+    "train_name": "Sealdah - kalyani simanta local",
     "stops": [
       {
-        "station": "Central Station",
-        "arrival": "07:00",
-        "departure": "07:05"
+        "station": "Sealdah",
+        "arrival": "06:09",
+        "departure": "06:15"
       },
       {
-        "station": "South Station",
+        "station": "Bidhan Nagar Road",
+        "arrival": "06:19",
+        "departure": "06:21"
+      },
+      {
+        "station": "Dum Dum Junction",
+        "arrival": "06:26",
+        "departure": "06:29"
+      },
+      {
+        "station": "Belgharia",
+        "arrival": "06:32",
+        "departure": "06:34"
+      },
+      {
+        "station": "Agarpara",
+        "arrival": "06:38",
+        "departure": "06:40"
+      },
+      {
+        "station": "Sodepur",
+        "arrival": "06:43",
+        "departure": "06:45"
+      },
+      {
+        "station": "Khardha",
+        "arrival": "06:48",
+        "departure": "06:50"
+      },
+      {
+        "station": "Titagarh",
+        "arrival": "06:52",
+        "departure": "06:53"
+      },
+      {
+        "station": "Brrackpore",
+        "arrival": "06:55",
+        "departure": "06:58"
+      },
+      {
+        "station": "Palta",
+        "arrival": "07:01",
+        "departure": "07:03"
+      },
+      {
+        "station": "Ichhapur",
+        "arrival": "07:06",
+        "departure": "07:08"
+      },
+      {
+        "station": "Shyamnagar",
+        "arrival": "07:11",
+        "departure": "07:12"
+      },
+      {
+        "station": "jagaddal",
+        "arrival": "07:15",
+        "departure": "07:16"
+      },
+      {
+        "station": "Kankinara",
+        "arrival": "07:18",
+        "departure": "07:19"
+      },
+      {
+        "station": "Naihati",
+        "arrival": "07:22",
+        "departure": "07:24"
+      },
+      {
+        "station": "Halishar",
+        "arrival": "07:27",
+        "departure": "07:28"
+      },
+      {
+        "station": "Kanchrapara",
         "arrival": "07:30",
-        "departure": "07:35"
+        "departure": "07:31"
       },
       {
-        "station": "East Station",
-        "arrival": "08:00",
-        "departure": "08:05"
+        "station": "kalyani",
+        "arrival": "07:33",
+        "departure": "07:34"
+      },
+      {
+        "station": "kalyani silpanchal",
+        "arrival": "07:36",
+        "departure": "07:37"
+      },
+      {
+        "station": "kalyani Ghoshpara",
+        "arrival": "07:39",
+        "departure": "07:40"
+      },
+      {
+        "station": "kalyani simanta",
+        "arrival": "07:43",
+        "departure": "08:00"
       }
     ],
     "delay": 9,
@@ -107,24 +197,80 @@
     "expected_departure": "08:14"
   },
   {
-    "train_no": 103,
-    "train_name": "Local Express C",
+    "train_no": 31438,
+    "train_name": "Naihati - Sealdha local",
     "stops": [
       {
-        "station": "North Station",
-        "arrival": "08:00",
-        "departure": "08:05"
-      },
-      {
-        "station": "Central Station",
-        "arrival": "08:30",
-        "departure": "08:35"
-      },
-      {
-        "station": "West Station",
-        "arrival": "09:00",
-        "departure": "09:05"
-      }
+    "station": "Naihati",
+    "arrival": "07:00",
+    "departure": "07:02"
+  },
+  {
+    "station": "Kankinara",
+    "arrival": "07:06",
+    "departure": "07:07"
+  },
+  {
+    "station": "Shyamnagar",
+    "arrival": "07:10",
+    "departure": "07:11"
+  },
+  {
+    "station": "Ichhapur",
+    "arrival": "07:14",
+    "departure": "07:15"
+  },
+  {
+    "station": "Palta",
+    "arrival": "07:18",
+    "departure": "07:19"
+  },
+  {
+    "station": "Barrackpore",
+    "arrival": "07:22",
+    "departure": "07:23"
+  },
+  {
+    "station": "Titagarh",
+    "arrival": "07:27",
+    "departure": "07:28"
+  },
+  {
+    "station": "Khardha",
+    "arrival": "07:32",
+    "departure": "07:33"
+  },
+  {
+    "station": "Sodepur",
+    "arrival": "07:37",
+    "departure": "07:38"
+  },
+  {
+    "station": "Agarpara",
+    "arrival": "07:42",
+    "departure": "07:43"
+  },
+  {
+    "station": "Belgharia",
+    "arrival": "07:47",
+    "departure": "07:48"
+  },
+  {
+    "station": "Dum Dum Junction",
+    "arrival": "07:52",
+    "departure": "07:54"
+  },
+  {
+    "station": "Bidhan Nagar Road",
+    "arrival": "07:58",
+    "departure": "07:59"
+  },
+  {
+    "station": "Sealdah",
+    "arrival": "08:05",
+    "departure": null
+  }
+
     ],
     "delay": 5,
     "current_station": "West Station",
@@ -133,24 +279,114 @@
     "expected_departure": "09:10"
   },
   {
-    "train_no": 104,
+    "train_no": 31316,
     "train_name": "Local Express D",
     "stops": [
       {
-        "station": "South Station",
-        "arrival": "09:00",
-        "departure": "09:05"
-      },
-      {
-        "station": "Central Station",
-        "arrival": "09:30",
-        "departure": "09:35"
-      },
-      {
-        "station": "East Station",
-        "arrival": "10:00",
-        "departure": "10:05"
-      }
+    "station": "Kalyani Simanta",
+    "arrival": "07:10",
+    "departure": "07:12"
+  },
+  {
+    "station": "Kalyani Ghoshpara",
+    "arrival": "07:15",
+    "departure": "07:16"
+  },
+  {
+    "station": "Kalyani Silpanchal",
+    "arrival": "07:18",
+    "departure": "07:19"
+  },
+  {
+    "station": "Kalyani",
+    "arrival": "07:21",
+    "departure": "07:22"
+  },
+  {
+    "station": "Kanchrapara",
+    "arrival": "07:25",
+    "departure": "07:26"
+  },
+  {
+    "station": "Halishar",
+    "arrival": "07:29",
+    "departure": "07:30"
+  },
+  {
+    "station": "Naihati",
+    "arrival": "07:33",
+    "departure": "07:35"
+  },
+  {
+    "station": "Kankinara",
+    "arrival": "07:38",
+    "departure": "07:39"
+  },
+  {
+    "station": "Jagaddal",
+    "arrival": "07:42",
+    "departure": "07:43"
+  },
+  {
+    "station": "Shyamnagar",
+    "arrival": "07:46",
+    "departure": "07:47"
+  },
+  {
+    "station": "Ichhapur",
+    "arrival": "07:50",
+    "departure": "07:51"
+  },
+  {
+    "station": "Palta",
+    "arrival": "07:54",
+    "departure": "07:55"
+  },
+  {
+    "station": "Barrackpore",
+    "arrival": "07:58",
+    "departure": "08:00"
+  },
+  {
+    "station": "Titagarh",
+    "arrival": "08:03",
+    "departure": "08:04"
+  },
+  {
+    "station": "Khardha",
+    "arrival": "08:07",
+    "departure": "08:08"
+  },
+  {
+    "station": "Sodepur",
+    "arrival": "08:11",
+    "departure": "08:12"
+  },
+  {
+    "station": "Agarpara",
+    "arrival": "08:15",
+    "departure": "08:16"
+  },
+  {
+    "station": "Belgharia",
+    "arrival": "08:19",
+    "departure": "08:20"
+  },
+  {
+    "station": "Dum Dum Junction",
+    "arrival": "08:24",
+    "departure": "08:26"
+  },
+  {
+    "station": "Bidhan Nagar Road",
+    "arrival": "08:30",
+    "departure": "08:31"
+  },
+  {
+    "station": "Sealdah",
+    "arrival": "08:40",
+    "departure": null
+  }
     ],
     "delay": 2,
     "current_station": "East Station",

@@ -74,11 +74,11 @@
         "departure": "08:45"
       }
     ],
-    "delay": -2,
-    "current_station": "Barrackpore",
-    "current_index": 8,
-    "expected_arrival": "08:16",
-    "expected_departure": "08:17"
+    "delay": 3,
+    "current_station": "Kankinara",
+    "current_index": 12,
+    "expected_arrival": "08:33",
+    "expected_departure": "08:34"
   },
   {
     "train_no": 31335,
@@ -191,10 +191,10 @@
       }
     ],
     "delay": 7,
-    "current_station": "Naihati",
-    "current_index": 14,
-    "expected_arrival": "07:29",
-    "expected_departure": "07:31"
+    "current_station": "kalyani silpanchal",
+    "current_index": 18,
+    "expected_arrival": "07:43",
+    "expected_departure": "07:44"
   },
   {
     "train_no": 31438,
@@ -271,11 +271,11 @@
         "departure": null
       }
     ],
-    "delay": -1,
-    "current_station": "Naihati",
-    "current_index": 0,
-    "expected_arrival": "06:59",
-    "expected_departure": "07:01"
+    "delay": 0,
+    "current_station": "Palta",
+    "current_index": 4,
+    "expected_arrival": "07:18",
+    "expected_departure": "07:19"
   },
   {
     "train_no": 31316,
@@ -387,10 +387,10 @@
         "departure": null
       }
     ],
-    "delay": -2,
-    "current_station": "Khardha",
-    "current_index": 14,
-    "expected_arrival": "08:05",
-    "expected_departure": "08:06"
+    "delay": 7,
+    "current_station": "Dum Dum Junction",
+    "current_index": 18,
+    "expected_arrival": "08:31",
+    "expected_departure": "08:33"
   }
 ]

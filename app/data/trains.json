@@ -279,7 +279,7 @@
   },
   {
     "train_no": 31316,
-    "train_name": "Local Express D",
+    "train_name": "kalyani simanta - Sealdha local",
     "stops": [
       {
         "station": "Kalyani Simanta",
@@ -388,9 +388,1555 @@
       }
     ],
     "delay": 7,
+<<<<<<< HEAD
     "current_station": "Dum Dum Junction",
     "current_index": 18,
     "expected_arrival": "08:31",
     "expected_departure": "08:33"
   }
+=======
+    "current_station": "Brrackpore",
+    "current_index": 2,
+    "expected_arrival": "08:05",
+    "expected_departure": "08:07"
+  },
+  {
+  "train_no": 34540,
+  "train_name": "Sealdah - Canning Local",
+  "stops": [
+    {
+      "station": "Sealdah",
+      "arrival": "5:53",
+      "departure": "5:55"
+    },
+    {
+      "station": "Park Circus",
+      "arrival": "5:59",
+      "departure": "6:00"
+    },
+    {
+      "station": "Ballygunge Junction",
+      "arrival": "6:05",
+      "departure": "6:07"
+    },
+    {
+      "station": "Dhakuria",
+      "arrival": "6:10",
+      "departure": "6:11"
+    },
+    {
+      "station": "Jadabpur",
+      "arrival": "6:15",
+      "departure": "6:16"
+    },
+    {
+      "station": "Baghajatin",
+      "arrival": "6:19",
+      "departure": "6:20"
+    },
+    {
+      "station": "New Garia",
+      "arrival": "6:23",
+      "departure": "6:24"
+    },
+    {
+      "station": "Garia",
+      "arrival": "6:27",
+      "departure": "6:28"
+    },
+    {
+      "station": "Narendrapur Halt",
+      "arrival": "6:31",
+      "departure": "6:33"
+    },
+    {
+      "station": "Sonarpur Junction",
+      "arrival": "6:36",
+      "departure": "6:37"
+    },
+    {
+      "station": "Bidyadharpur",
+      "arrival": "6:40",
+      "departure": "6:41"
+    },
+    {
+      "station": "Kalikapur",
+      "arrival": "6:44",
+      "departure": "6:45"
+    },
+    {
+      "station": "Champahati",
+      "arrival": "6:48",
+      "departure": "6:49"
+    },
+    {
+      "station": "Piali",
+      "arrival": "6:52",
+      "departure": "6:53"
+    },
+    {
+      "station": "Gourdaha Halt",
+      "arrival": "6:56",
+      "departure": "6:58"
+    },
+    {
+      "station": "Ghutiari Sharif",
+      "arrival": "7:01",
+      "departure": "7:02"
+    },
+    {
+      "station": "Betberia Gola",
+      "arrival": "7:04",
+      "departure": "7:05"
+    },
+    {
+      "station": "Taldi",
+      "arrival": "7:07",
+      "departure": "7:08"
+    },
+    {
+      "station": "Canning",
+      "arrival": "7:10",
+      "departure": null
+    }
+  ],
+  "delay": 9,
+  "current_station": "Sonarpur Junction",
+  "current_index": 9,
+  "expected_arrival": "6:45",
+  "expected_departure": "6:46"
+},
+
+{
+  "train_no": 34519,
+  "train_name": "Canning - Sealdah Local",
+  "stops": [
+    {
+      "station": "Canning",
+      "arrival": "6:50",
+      "departure": "6:52"
+    },
+    {
+      "station": "Taldi",
+      "arrival": "6:55",
+      "departure": "6:56"
+    },
+    {
+      "station": "Betberia Gola",
+      "arrival": "6:59",
+      "departure": "7:00"
+    },
+    {
+      "station": "Ghutiari Sharif",
+      "arrival": "7:03",
+      "departure": "7:04"
+    },
+    {
+      "station": "Gourdaha Halt",
+      "arrival": "7:07",
+      "departure": "7:08"
+    },
+    {
+      "station": "Piali",
+      "arrival": "7:11",
+      "departure": "7:12"
+    },
+    {
+      "station": "Champahati",
+      "arrival": "7:15",
+      "departure": "7:16"
+    },
+    {
+      "station": "Kalikapur",
+      "arrival": "7:19",
+      "departure": "7:20"
+    },
+    {
+      "station": "Bidyadharpur",
+      "arrival": "7:23",
+      "departure": "7:24"
+    },
+    {
+      "station": "Sonarpur Junction",
+      "arrival": "7:27",
+      "departure": "7:28"
+    },
+    {
+      "station": "Narendrapur Halt",
+      "arrival": "7:31",
+      "departure": "7:32"
+    },
+    {
+      "station": "Garia",
+      "arrival": "7:35",
+      "departure": "7:36"
+    },
+    {
+      "station": "New Garia",
+      "arrival": "7:39",
+      "departure": "7:40"
+    },
+    {
+      "station": "Baghajatin",
+      "arrival": "7:43",
+      "departure": "7:44"
+    },
+    {
+      "station": "Jadabpur",
+      "arrival": "7:47",
+      "departure": "7:48"
+    },
+    {
+      "station": "Dhakuria",
+      "arrival": "7:51",
+      "departure": "7:52"
+    },
+    {
+      "station": "Ballygunge Junction",
+      "arrival": "7:55",
+      "departure": "7:56"
+    },
+    {
+      "station": "Park Circus",
+      "arrival": "7:59",
+      "departure": "8:00"
+    },
+    {
+      "station": "Sealdah",
+      "arrival": "8:07",
+      "departure": null
+    }
+  ],
+  "delay": 10,
+  "current_station": "Sonarpur Junction",
+  "current_index": 5,
+  "expected_arrival": "7:37",
+  "expected_departure":"7:38"
+},
+
+{
+  "train_no": 33525,
+  "train_name": "Sealdah - Hasnabad Local",
+  "stops": [
+    {
+      "station": "Sealdah",
+      "arrival": "2:20",
+      "departure": "2:22"
+    },
+    {
+      "station": "BidhanNagar Road",
+      "arrival": "2:26",
+      "departure": "2:27"
+    },
+    {
+      "station": "Dum Dum Junction",
+      "arrival": "2:31",
+      "departure": "2:32"
+    },
+    {
+      "station": "Dum Dum Cantonment",
+      "arrival": "2:36",
+      "departure": "2:37"
+    },
+    {
+      "station": "Durganagar",
+      "arrival": "2:41",
+      "departure": "2:42"
+    },
+    {
+      "station": "Birati",
+      "arrival": "2:46",
+      "departure": "2:47"
+    },
+    {
+      "station": "Bisharpara Kodaliya",
+      "arrival": "2:51",
+      "departure": "2:52"
+    },
+    {
+      "station": "New Barrackpore",
+      "arrival": "2:55",
+      "departure": "2:56"
+    },
+    {
+      "station": "Madhyamgram",
+      "arrival": "3:00",
+      "departure": "3:01"
+    },
+    {
+      "station": "Hridaypur",
+      "arrival": "3:05",
+      "departure": "3:06"
+    },
+    {
+      "station": "Barasat Junction",
+      "arrival": "3:10",
+      "departure": "3:11"
+    },
+    {
+      "station": "Kazipara",
+      "arrival": "3:15",
+      "departure": "3:16"
+    },
+    {
+      "station": "Karea Kadambagachi",
+      "arrival": "3:20",
+      "departure": "3:21"
+    },
+    {
+      "station": "Bahira Kalibari",
+      "arrival": "3:25",
+      "departure": "3:26"
+    },
+    {
+      "station": "Sondalia",
+      "arrival": "3:30",
+      "departure": "3:31"
+    },
+    {
+      "station": "Beliaghata Road",
+      "arrival": "3:35",
+      "departure": "3:36"
+    },
+    {
+      "station": "Lebutala",
+      "arrival": "3:40",
+      "departure": "3:41"
+    },
+    {
+      "station": "Bashila",
+      "arrival": "3:45",
+      "departure": "3:46"
+    },
+    {
+      "station": "Harua Road",
+      "arrival": "3:50",
+      "departure": "3:52"
+    },
+    {
+      "station": "Kankra Mirzanagar",
+      "arrival": "3:55",
+      "departure": "3:56"
+    },
+    {
+      "station": "Malatipur",
+      "arrival": "3:59",
+      "departure": "4:00"
+    },
+    {
+      "station": "Ghora Ras Ghona",
+      "arrival": "4:03",
+      "departure": "4:04"
+    },
+    {
+      "station": "Champapukur",
+      "arrival": "4:07",
+      "departure": "4:08"
+    },
+    {
+      "station": "Bhyabla Halt",
+      "arrival": "4:11",
+      "departure": "4:12"
+    },
+    {
+      "station": "Basirhat",
+      "arrival": "4:15",
+      "departure": "4:16"
+    },
+    {
+      "station": "Matania Anantpur",
+      "arrival": "4:19",
+      "departure": "4:20"
+    },
+    {
+      "station": "Madhyampur",
+      "arrival": "4:22",
+      "departure": "4:23"
+    },
+    {
+      "station": "Nimdanri",
+      "arrival": "4:25",
+      "departure": "4:26"
+    },
+    {
+      "station": "Hasnabad",
+      "arrival": "4:27",
+      "departure": null
+    }
+  ],
+  "delay": 15,
+  "current_station": "Barasat Junction",
+  "current_index": 5,
+  "expected_arrival": "3.25",
+  "expected_departure":"3.27"
+},
+
+
+{
+  "train_no": 33530,
+  "train_name": "Hasnabad - Sealdah Local",
+  "stops": [
+    {
+      "station": "Hasnabad",
+      "arrival": "2:54",
+      "departure": "2:56"
+    },
+    {
+      "station": "Nimdanri",
+      "arrival": "2:59",
+      "departure": "3:00"
+    },
+    {
+      "station": "Madhyampur",
+      "arrival": "3:03",
+      "departure": "3:04"
+    },
+    {
+      "station": "Matania Anantpur",
+      "arrival": "3:07",
+      "departure": "3:08"
+    },
+    {
+      "station": "Basirhat",
+      "arrival": "3:11",
+      "departure": "3:12"
+    },
+    {
+      "station": "Bhyabla Halt",
+      "arrival": "3:15",
+      "departure": "3:16"
+    },
+    {
+      "station": "Champapukur",
+      "arrival": "3:19",
+      "departure": "3:20"
+    },
+    {
+      "station": "Ghora Ras Ghona",
+      "arrival": "3:23",
+      "departure": "3:24"
+    },
+    {
+      "station": "Malatipur",
+      "arrival": "3:27",
+      "departure": "3:28"
+    },
+    {
+      "station": "Kankra Mirzanagar",
+      "arrival": "3:31",
+      "departure": "3:32"
+    },
+    {
+      "station": "Harua Road",
+      "arrival": "3:35",
+      "departure": "3:36"
+    },
+    {
+      "station": "Bashila",
+      "arrival": "3:39",
+      "departure": "3:40"
+    },
+    {
+      "station": "Lebutala",
+      "arrival": "3:43",
+      "departure": "3:44"
+    },
+    {
+      "station": "Beliaghata Road",
+      "arrival": "3:47",
+      "departure": "3:48"
+    },
+    {
+      "station": "Sondalia",
+      "arrival": "3:51",
+      "departure": "3:52"
+    },
+    {
+      "station": "Bahira Kalibari",
+      "arrival": "3:55",
+      "departure": "3:56"
+    },
+    {
+      "station": "Karea Kadambagachi",
+      "arrival": "3:59",
+      "departure": "4:00"
+    },
+    {
+      "station": "Kazipara",
+      "arrival": "4:03",
+      "departure": "4:04"
+    },
+    {
+      "station": "Barasat Junction",
+      "arrival": "4:07",
+      "departure": "4:08"
+    },
+    {
+      "station": "Hridaypur",
+      "arrival": "4:11",
+      "departure": "4:12"
+    },
+    {
+      "station": "Madhyamgram",
+      "arrival": "4:15",
+      "departure": "4:16"
+    },
+    {
+      "station": "New Barrackpore",
+      "arrival": "4:19",
+      "departure": "4:20"
+    },
+    {
+      "station": "Bisharpara Kodaliya",
+      "arrival": "4:23",
+      "departure": "4:24"
+    },
+    {
+      "station": "Birati",
+      "arrival": "4:27",
+      "departure": "4:28"
+    },
+    {
+      "station": "Durganagar",
+      "arrival": "4:31",
+      "departure": "4:32"
+    },
+    {
+      "station": "Dum Dum Cantonment",
+      "arrival": "4:35",
+      "departure": "4:36"
+    },
+    {
+      "station": "Dum Dum Junction",
+      "arrival": "4:39",
+      "departure": "4:40"
+    },
+    {
+      "station": "BidhanNagar Road",
+      "arrival": "4:43",
+      "departure": "4:44"
+    },
+    {
+      "station": "Sealdah",
+      "arrival": "4:57",
+      "departure": null
+    }
+  ],
+  "delay": 20,
+  "current_station": "Barasat Junction",
+  "current_index": 3,
+  "expected_arrival": "4:27",
+  "expected_departure":"4:28"
+},
+{
+  "train_no": 37211,
+  "train_name": "Howrah - Bandel Local",
+  "stops": [
+    {
+      "station": "Howrah Junction",
+      "arrival": "4:45",
+      "departure": "4:47"
+    },
+    {
+      "station": "Liluah",
+      "arrival": "4:52",
+      "departure": "4:53"
+    },
+    {
+      "station": "Belur",
+      "arrival": "4:55",
+      "departure": "4:56"
+    },
+    {
+      "station": "Bally",
+      "arrival": "4:58",
+      "departure": "4:59"
+    },
+    {
+      "station": "Uttarpara",
+      "arrival": "5:02",
+      "departure": "5:03"
+    },
+    {
+      "station": "Hind Motor",
+      "arrival": "5:05",
+      "departure": "5:06"
+    },
+    {
+      "station": "Konnagar",
+      "arrival": "5:08",
+      "departure": "5:09"
+    },
+    {
+      "station": "Rishra",
+      "arrival": "5:11",
+      "departure": "5:12"
+    },
+    {
+      "station": "Serampore",
+      "arrival": "5:15",
+      "departure": "5:16"
+    },
+    {
+      "station": "Sheoraphuli Junction",
+      "arrival": "5:18",
+      "departure": "5:19"
+    },
+    {
+      "station": "Baidyabati",
+      "arrival": "5:21",
+      "departure": "5:22"
+    },
+    {
+      "station": "Bhadreshwar",
+      "arrival": "5:24",
+      "departure": "5:25"
+    },
+    {
+      "station": "Mankundu",
+      "arrival": "5:27",
+      "departure": "5:28"
+    },
+    {
+      "station": "Chandannagar",
+      "arrival": "5:30",
+      "departure": "5:31"
+    },
+    {
+      "station": "Chuchura",
+      "arrival": "5:33",
+      "departure": "5:34"
+    },
+    {
+      "station": "Hooghly",
+      "arrival": "5:36",
+      "departure": "5:37"
+    },
+    {
+      "station": "Bandel Junction",
+      "arrival": "5:45",
+      "departure": null
+    }
+  ],
+  "delay": 10,
+  "current_station": "Sheoraphuli Junction",
+  "current_index": 2,
+  "expected_arrival": "5:28",
+  "expected_departure": "5:29"
+},
+{
+  "train_no": 37212,
+  "train_name": "Bandel - Howrah Local",
+  "stops": [
+    {
+      "station": "Bandel Junction",
+      "arrival": "3:07",
+      "departure": "3:09"
+    },
+    {
+      "station": "Hooghly",
+      "arrival": "3:17",
+      "departure": "3:18"
+    },
+    {
+      "station": "Chuchura",
+      "arrival": "3:20",
+      "departure": "3:21"
+    },
+    {
+      "station": "Chandannagar",
+      "arrival": "3:23",
+      "departure": "3:24"
+    },
+    {
+      "station": "Mankundu",
+      "arrival": "3:26",
+      "departure": "3:27"
+    },
+    {
+      "station": "Bhadreshwar",
+      "arrival": "3:29",
+      "departure": "3:30"
+    },
+    {
+      "station": "Baidyabati",
+      "arrival": "3:32",
+      "departure": "3:33"
+    },
+    {
+      "station": "Sheoraphuli Junction",
+      "arrival": "3:35",
+      "departure": "3:36"
+    },
+    {
+      "station": "Serampore",
+      "arrival": "3:38",
+      "departure": "3:39"
+    },
+    {
+      "station": "Rishra",
+      "arrival": "3:42",
+      "departure": "3:43"
+    },
+    {
+      "station": "Konnagar",
+      "arrival": "3:45",
+      "departure": "3:46"
+    },
+    {
+      "station": "Hind Motor",
+      "arrival": "3:48",
+      "departure": "3:49"
+    },
+    {
+      "station": "Uttarpara",
+      "arrival": "3:51",
+      "departure": "3:52"
+    },
+    {
+      "station": "Bally",
+      "arrival": "3:55",
+      "departure": "3:56"
+    },
+    {
+      "station": "Belur",
+      "arrival": "3:58",
+      "departure": "3:59"
+    },
+    {
+      "station": "Liluah",
+      "arrival": "4:01",
+      "departure": "4:02"
+    },
+    {
+      "station": "Howrah Junction",
+      "arrival": "4:10",
+      "departure": null
+    }
+  ],
+  "delay": 7,
+  "current_station": "Sheoraphuli Junction",
+  "current_index": 4,
+  "expected_arrival": "3:42",
+  "expected_departure": "3:43"
+},
+{
+  "train_no": 33847,
+  "train_name": "Sealdah - Bongaon Local",
+  "stops": [
+    {
+      "station": "Sealdah",
+      "arrival": "6:39",
+      "departure": "6:41"
+    },
+    {
+      "station": "Bidhannagar Road",
+      "arrival": "6:49",
+      "departure": "6:50"
+    },
+    {
+      "station": "Dum Dum Junction",
+      "arrival": "6:54",
+      "departure": "6:55"
+    },
+    {
+      "station": "Dum Dum Cantonment",
+      "arrival": "6:58",
+      "departure": "6:59"
+    },
+    {
+      "station": "Durganagar",
+      "arrival": "7:03",
+      "departure": "7:04"
+    },
+    {
+      "station": "Birati",
+      "arrival": "7:07",
+      "departure": "7:08"
+    },
+    {
+      "station": "Bisharpara Kodaliya",
+      "arrival": "7:12",
+      "departure": "7:13"
+    },
+    {
+      "station": "New Barrackpore",
+      "arrival": "7:16",
+      "departure": "7:17"
+    },
+    {
+      "station": "Madhyamgram",
+      "arrival": "7:21",
+      "departure": "7:22"
+    },
+    {
+      "station": "Hridaypur",
+      "arrival": "7:26",
+      "departure": "7:27"
+    },
+    {
+      "station": "Barasat Junction",
+      "arrival": "7:31",
+      "departure": "7:32"
+    },
+    {
+      "station": "Bamangachhi",
+      "arrival": "7:36",
+      "departure": "7:37"
+    },
+    {
+      "station": "Dattapukur",
+      "arrival": "7:41",
+      "departure": "7:42"
+    },
+    {
+      "station": "Bira",
+      "arrival": "7:46",
+      "departure": "7:47"
+    },
+    {
+      "station": "Guma",
+      "arrival": "7:51",
+      "departure": "7:52"
+    },
+    {
+      "station": "Ashok Nagar Road",
+      "arrival": "7:56",
+      "departure": "7:57"
+    },
+    {
+      "station": "Habra",
+      "arrival": "8:01",
+      "departure": "8:02"
+    },
+    {
+      "station": "Shanhati",
+      "arrival": "8:06",
+      "departure": "8:07"
+    },
+    {
+      "station": "Machlandapur",
+      "arrival": "8:11",
+      "departure": "8:12"
+    },
+    {
+      "station": "Gobardanga",
+      "arrival": "8:16",
+      "departure": "8:17"
+    },
+    {
+      "station": "Thakurnagar",
+      "arrival": "8:21",
+      "departure": "8:22"
+    },
+    {
+      "station": "Chandpara",
+      "arrival": "8:26",
+      "departure": "8:27"
+    },
+    {
+      "station": "Bibhuti Bhushan Halt",
+      "arrival": "8:26",
+      "departure": "8:27"
+    },
+    {
+      "station": "Bongaon",
+      "arrival": "8:35",
+      "departure": null
+    }
+  ],
+  "delay": 15,
+  "current_station":"Barasat Junction",
+  "current_index": 4,
+  "expected_arrival": "7:45",
+  "expected_departure": "7:46"
+},
+{
+  "train_no": 33846,
+  "train_name": "Bongaon - Sealdah Local",
+  "stops": [
+    {
+      "station": "Bongaon",
+      "arrival": "5:30",
+      "departure": "5:32"
+    },
+    {
+      "station": "Bibhuti Bhushan Halt",
+      "arrival": "5:36",
+      "departure": "5:37"
+    },
+    {
+      "station": "Chandpara",
+      "arrival": "5:36",
+      "departure": "5:37"
+    },
+    {
+      "station": "Thakurnagar",
+      "arrival": "5:41",
+      "departure": "5:42"
+    },
+    {
+      "station": "Gobardanga",
+      "arrival": "5:46",
+      "departure": "5:47"
+    },
+    {
+      "station": "Machlandapur",
+      "arrival": "5:51",
+      "departure": "5:52"
+    },
+    {
+      "station": "Shanhati",
+      "arrival": "5:56",
+      "departure": "5:57"
+    },
+    {
+      "station": "Habra",
+      "arrival": "6:01",
+      "departure": "6:02"
+    },
+    {
+      "station": "Ashok Nagar Road",
+      "arrival": "6:06",
+      "departure": "6:07"
+    },
+    {
+      "station": "Guma",
+      "arrival": "6:11",
+      "departure": "6:12"
+    },
+    {
+      "station": "Bira",
+      "arrival": "6:16",
+      "departure": "6:17"
+    },
+    {
+      "station": "Dattapukur",
+      "arrival": "6:21",
+      "departure": "6:22"
+    },
+    {
+      "station": "Bamangachhi",
+      "arrival": "6:26",
+      "departure": "6:27"
+    },
+    {
+      "station": "Barasat Junction",
+      "arrival": "6:31",
+      "departure": "6:32"
+    },
+    {
+      "station": "Hridaypur",
+      "arrival": "6:36",
+      "departure": "6:37"
+    },
+    {
+      "station": "Madhyamgram",
+      "arrival": "6:41",
+      "departure": "6:42"
+    },
+    {
+      "station": "New Barrackpore",
+      "arrival": "6:46",
+      "departure": "6:47"
+    },
+    {
+      "station": "Bisharpara Kodaliya",
+      "arrival": "6:51",
+      "departure": "6:52"
+    },
+    {
+      "station": "Birati",
+      "arrival": "6:56",
+      "departure": "6:57"
+    },
+    {
+      "station": "Durganagar",
+      "arrival": "7:01",
+      "departure": "7:02"
+    },
+    {
+      "station": "Dum Dum Cantonment",
+      "arrival": "7:06",
+      "departure": "7:07"
+    },
+    {
+      "station": "Dum Dum Junction",
+      "arrival": "7:11",
+      "departure": "7:12"
+    },
+    {
+      "station": "Bidhannagar Road",
+      "arrival": "7:16",
+      "departure": "7:17"
+    },
+    {
+      "station": "Sealdah",
+      "arrival": "7:30",
+      "departure": null
+    }
+  ],
+  "delay": 9,
+  "current_station": "Barasat Junction",
+  "current_index": 4,
+  "expected_arrival": "7:55",
+  "expected_departure": "7:56"
+},
+{
+  "train_no": 36833,
+  "train_name": "Howrah - Bardhaman Local",
+  "stops": [
+    {
+      "station": "Howrah Junction",
+      "arrival": "3:30",
+      "departure": "3:35"
+    },
+    {
+      "station": "Liluah",
+      "arrival": "3:43",
+      "departure": "3:44"
+    },
+    {
+      "station": "Belur",
+      "arrival": "3:46",
+      "departure": "3:47"
+    },
+    {
+      "station": "Bally",
+      "arrival": "3:49",
+      "departure": "3:50"
+    },
+    {
+      "station": "Belanagar",
+      "arrival": "3:52",
+      "departure": "3:53"
+    },
+    {
+      "station": "Dankuni Junction",
+      "arrival": "3:57",
+      "departure": "3:58"
+    },
+    {
+      "station": "Gobra",
+      "arrival": "4:02",
+      "departure": "4:03"
+    },
+    {
+      "station": "Janai Road",
+      "arrival": "4:04",
+      "departure": "4:05"
+    },
+    {
+      "station": "Begampur",
+      "arrival": "4:07",
+      "departure": "4:08"
+    },
+    {
+      "station": "Baruipara",
+      "arrival": "4:12",
+      "departure": "4:13"
+    },
+    {
+      "station": "Mirzapur Bankipur",
+      "arrival": "4:14",
+      "departure": "4:15"
+    },
+    {
+      "station": "Balarambati",
+      "arrival": "4:17",
+      "departure": "4:18"
+    },
+    {
+      "station": "Kamarkundu",
+      "arrival": "4:20",
+      "departure": "4:21"
+    },
+    {
+      "station": "Madhusudanpur",
+      "arrival": "4:25",
+      "departure": "4:26"
+    },
+    {
+      "station": "Chandanpur",
+      "arrival": "4:30",
+      "departure": "4:31"
+    },
+    {
+      "station": "Porabazar",
+      "arrival": "4:34",
+      "departure": "4:35"
+    },
+    {
+      "station": "Belmuri",
+      "arrival": "4:36",
+      "departure": "4:37"
+    },
+    {
+      "station": "Dhaniakhali Halt",
+      "arrival": "4:40",
+      "departure": "4:41"
+    },
+    {
+      "station": "Sibaichandi",
+      "arrival": "4:43",
+      "departure": "4:44"
+    },
+    {
+      "station": "Hajigarh",
+      "arrival": "4:47",
+      "departure": "4:48"
+    },
+    {
+      "station": "Gurap",
+      "arrival": "4:50",
+      "departure": "4:51"
+    },
+    {
+      "station": "Jhapandanga",
+      "arrival": "4:55",
+      "departure": "4:56"
+    },
+    {
+      "station": "Jaugram",
+      "arrival": "4:59",
+      "departure": "5:00"
+    },
+    {
+      "station": "Nabagram",
+      "arrival": "5:05",
+      "departure": "5:06"
+    },
+    {
+      "station": "Masagram",
+      "arrival": "5:08",
+      "departure": "5:09"
+    },
+    {
+      "station": "Chanchai",
+      "arrival": "5:12",
+      "departure": "5:13"
+    },
+    {
+      "station": "Palla Road",
+      "arrival": "5:15",
+      "departure": "5:16"
+    },
+    {
+      "station": "Saktigarh",
+      "arrival": "5:20",
+      "departure": "5:21"
+    },
+    {
+      "station": "Gangpur",
+      "arrival": "5:24",
+      "departure": "5:25"
+    },
+    {
+      "station": "Bardhaman Junction",
+      "arrival": "5:40",
+      "departure": null
+    }
+  ],
+  "delay": 10,
+  "current_station": "Dankuni Junction",
+  "current_index": 5,
+  "expected_arrival": "4:07",
+  "expected_departure": "3:58"
+},
+{
+  "train_no": 37840,
+  "train_name": "Bardhaman - Howrah Local",
+  "stops": [
+    {
+      "station": "Bardhaman Junction",
+      "arrival": "3:03",
+      "departure": "3:10"
+    },
+    {
+      "station": "Gangpur",
+      "arrival": "3:25",
+      "departure": "3:26"
+    },
+    {
+      "station": "Saktigarh",
+      "arrival": "3:31",
+      "departure": "3:32"
+    },
+    {
+      "station": "Palla Road",
+      "arrival": "3:36",
+      "departure": "3:37"
+    },
+    {
+      "station": "Chanchai",
+      "arrival": "3:41",
+      "departure": "3:42"
+    },
+    {
+      "station": "Masagram",
+      "arrival": "3:45",
+      "departure": "3:46"
+    },
+    {
+      "station": "Nabagram",
+      "arrival": "3:50",
+      "departure": "3:51"
+    },
+    {
+      "station": "Jaugram",
+      "arrival": "3:56",
+      "departure": "3:57"
+    },
+    {
+      "station": "Jhapandanga",
+      "arrival": "4:02",
+      "departure": "4:03"
+    },
+    {
+      "station": "Gurap",
+      "arrival": "4:07",
+      "departure": "4:08"
+    },
+    {
+      "station": "Hajigarh",
+      "arrival": "4:12",
+      "departure": "4:13"
+    },
+    {
+      "station": "Sibaichandi",
+      "arrival": "4:16",
+      "departure": "4:17"
+    },
+    {
+      "station": "Dhaniakhali Halt",
+      "arrival": "4:21",
+      "departure": "4:22"
+    },
+    {
+      "station": "Belmuri",
+      "arrival": "4:25",
+      "departure": "4:26"
+    },
+    {
+      "station": "Porabazar",
+      "arrival": "4:28",
+      "departure": "4:29"
+    },
+    {
+      "station": "Chandanpur",
+      "arrival": "4:33",
+      "departure": "4:34"
+    },
+    {
+      "station": "Madhusudanpur",
+      "arrival": "4:39",
+      "departure": "4:40"
+    },
+    {
+      "station": "Kamarkundu",
+      "arrival": "4:44",
+      "departure": "4:45"
+    },
+    {
+      "station": "Balarambati",
+      "arrival": "4:49",
+      "departure": "4:50"
+    },
+    {
+      "station": "Mirzapur Bankipur",
+      "arrival": "4:52",
+      "departure": "4:53"
+    },
+    {
+      "station": "Baruipara",
+      "arrival": "4:55",
+      "departure": "4:56"
+    },
+    {
+      "station": "Begampur",
+      "arrival": "5:00",
+      "departure": "5:01"
+    },
+    {
+      "station": "Janai Road",
+      "arrival": "5:03",
+      "departure": "5:04"
+    },
+    {
+      "station": "Gobra",
+      "arrival": "5:06",
+      "departure": "5:07"
+    },
+    {
+      "station": "Dankuni Junction",
+      "arrival": "5:11",
+      "departure": "5:12"
+    },
+    {
+      "station": "Belanagar",
+      "arrival": "5:17",
+      "departure": "5:18"
+    },
+    {
+      "station": "Bally",
+      "arrival": "5:21",
+      "departure": "5:22"
+    },
+    {
+      "station": "Belur",
+      "arrival": "5:25",
+      "departure": "5:26"
+    },
+    {
+      "station": "Liluah",
+      "arrival": "5:29",
+      "departure": "5:30"
+    },
+    {
+      "station": "Howrah Junction",
+      "arrival": "5:37",
+      "departure": null
+    }
+  ],
+  "delay": 15,
+  "current_station": "Kamarkundu",
+  "current_index": 7,
+  "expected_arrival": "5:09",
+  "expected_departure": "5:10"
+},
+{
+  "train_no": 34056,
+  "train_name": "Kalyani Simanta - Komagata Maru Budge Budge Local",
+  "stops": [
+    {
+      "station": "Kalyani Simanta",
+      "arrival": "11:07",
+      "departure": "11:07"
+    },
+    {
+      "station": "Kalyani Ghoshpara",
+      "arrival": "11:08",
+      "departure": "11:09"
+    },
+    {
+      "station": "Kalyani Silpanchal",
+      "arrival": "11:11",
+      "departure": "11:12"
+    },
+    {
+      "station": "Kalyani",
+      "arrival": "11:15",
+      "departure": "11:16"
+    },
+    {
+      "station": "Kanchrapara",
+      "arrival": "11:20",
+      "departure": "11:21"
+    },
+    {
+      "station": "Halisahar",
+      "arrival": "11:23",
+      "departure": "11:24"
+    },
+    {
+      "station": "Naihati Junction",
+      "arrival": "11:30",
+      "departure": "11:31"
+    },
+    {
+      "station": "Kankinara",
+      "arrival": "11:34",
+      "departure": "11:35"
+    },
+    {
+      "station": "Jagaddal",
+      "arrival": "11:37",
+      "departure": "11:38"
+    },
+    {
+      "station": "Shyamnagar",
+      "arrival": "11:40",
+      "departure": "11:41"
+    },
+    {
+      "station": "Ichhapur",
+      "arrival": "11:44",
+      "departure": "11:45"
+    },
+    {
+      "station": "Palta",
+      "arrival": "11:47",
+      "departure": "11:48"
+    },
+    {
+      "station": "Barrackpore",
+      "arrival": "11:51",
+      "departure": "11:52"
+    },
+    {
+      "station": "Titagarh",
+      "arrival": "11:54",
+      "departure": "11:55"
+    },
+    {
+      "station": "Khardaha",
+      "arrival": "11:57",
+      "departure": "11:58"
+    },
+    {
+      "station": "Sodpur",
+      "arrival": "12:01",
+      "departure": "12:02"
+    },
+    {
+      "station": "Agarpara",
+      "arrival": "12:04",
+      "departure": "12:05"
+    },
+    {
+      "station": "Belgharia",
+      "arrival": "12:07",
+      "departure": "12:08"
+    },
+    {
+      "station": "Dum Dum Junction",
+      "arrival": "12:15",
+      "departure": "12:16"
+    },
+    {
+      "station": "BidhanNagar Road",
+      "arrival": "12:19",
+      "departure": "12:20"
+    },
+    {
+      "station": "Sir Gurudas Banerjee Halt",
+      "arrival": "12:25",
+      "departure": "12:26"
+    },
+    {
+      "station": "Park Circus",
+      "arrival": "12:36",
+      "departure": "12:37"
+    },
+    {
+      "station": "Ballygunge Junction",
+      "arrival": "12:50",
+      "departure": "12:51"
+    },
+    {
+      "station": "Lake Gardens",
+      "arrival": "12:57",
+      "departure": "12:58"
+    },
+    {
+      "station": "Tollygunge",
+      "arrival": "12:59",
+      "departure": "1:00"
+    },
+    {
+      "station": "New Alipore",
+      "arrival": "1:03",
+      "departure": "1:04"
+    },
+    {
+      "station": "Majerhat",
+      "arrival": "1:07",
+      "departure": "1:08"
+    },
+    {
+      "station": "Brace Bridge",
+      "arrival": "1:10",
+      "departure": "1:11"
+    },
+    {
+      "station": "Santoshpur",
+      "arrival": "1:14",
+      "departure": "1:15"
+    },
+    {
+      "station": "Akra",
+      "arrival": "1:18",
+      "departure": "1:19"
+    },
+    {
+      "station": "Nangi",
+      "arrival": "1:24",
+      "departure": "1:25"
+    },
+    {
+      "station": "Komagata Maru Budge Budge",
+      "arrival": "1:35",
+      "departure": null
+    }
+  ],
+  "delay": 12,
+  "current_station": "Naihati Junction",
+  "current_index": 6,
+  "expected_arrival": "11:42",
+  "expected_departure": "11:44"
+},
+{
+  "train_no": 37541,
+  "train_name": "Naihati - Bandel Local",
+  "stops": [
+    {
+      "station": "Naihati Junction",
+      "arrival": "3:50",
+      "departure": "3:50"
+    },
+    {
+      "station": "Garifa",
+      "arrival": "3:54",
+      "departure": "3:55"
+    },
+    {
+      "station": "Hooghly Ghat",
+      "arrival": "3:59",
+      "departure": "4:00"
+    },
+    {
+      "station": "Bandel Junction",
+      "arrival": "4:10",
+      "departure": null
+    }
+  ],
+  "delay": 5,
+  "current_station": "Garifa",
+  "current_index": 1,
+  "expected_arrival": "4:00",
+  "expected_departure": "4:01"
+},
+{
+  "train_no": 37546,
+  "train_name": "Bandel - Naihati Local",
+  "stops": [
+    {
+      "station": "Bandel Junction",
+      "arrival": "4:40",
+      "departure": "4:45"
+    },
+    {
+      "station": "Hooghly Ghat",
+      "arrival": "4:55",
+      "departure": "4:56"
+    },
+    {
+      "station": "Garifa",
+      "arrival": "5:00",
+      "departure": "5:01"
+    },
+    {
+      "station": "Naihati Junction",
+      "arrival": "5:05",
+      "departure": null
+    }
+  ],
+  "delay": 3,
+  "current_station": "Hooghly Ghat",
+  "current_index": 1,
+  "expected_arrival": "5:03",
+  "expected_departure": "5:04"
+}
+
+>>>>>>> d5873b1967db711fa3121084112466098e731f20
 ]

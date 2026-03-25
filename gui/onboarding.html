@@ -20,7 +20,6 @@ body {
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
-
 .onboarding-container {
     display: flex;
     justify-content: center;
@@ -28,7 +27,6 @@ body {
     min-height: 100vh;
     padding: 20px;
 }
-
 .onboarding-card {
     background: #fff;
     color: #1e293b;
@@ -38,7 +36,6 @@ body {
     width: 100%;
     max-width: 500px;
 }
-
 .onboarding-title {
     font-family: 'Poppins', sans-serif;
     font-size: 2.8em;
@@ -48,27 +45,23 @@ body {
     margin-bottom: 15px;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
 }
-
 .onboarding-subtitle {
     text-align: center;
     font-size: 1.1em;
     color: #334155;
     margin-bottom: 30px;
 }
-
 form .input-group {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
     position: relative;
 }
-
 form .input-group label {
     margin-bottom: 5px;
     font-weight: 500;
     color: #1e293b;
 }
-
 form .input-group input, 
 form .input-group select {
     padding: 12px 15px;
@@ -79,13 +72,11 @@ form .input-group select {
     outline: none;
     transition: 0.3s;
 }
-
 form .input-group input:focus,
 form .input-group select:focus {
     box-shadow: 0 0 0 2px #1e3a8a;
     background: #fff;
 }
-
 .submit-button {
     width: 100%;
     padding: 14px;
@@ -98,18 +89,15 @@ form .input-group select:focus {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .submit-button:hover {
     background-color: #3b5fc0;
 }
-
 .note-text {
     margin-top: 15px;
     font-size: 0.9em;
     color: #64748b;
     text-align: center;
 }
-
 /* Suggestions box */
 .suggestions {
     position: absolute;
@@ -124,13 +112,11 @@ form .input-group select:focus {
     overflow-y: auto;
     display: none;
 }
-
 .suggestion-item {
     padding: 10px 12px;
     cursor: pointer;
     color: #1e293b;
 }
-
 .suggestion-item:hover {
     background-color: #f0f0f0;
 }
@@ -147,12 +133,10 @@ form .input-group select:focus {
                 <label for="username">Full Name</label>
                 <input type="text" id="username" required placeholder="John Doe">
             </div>
-
             <div class="input-group">
                 <label for="pincode">Pincode</label>
                 <input type="text" id="pincode" required placeholder="700001">
             </div>
-
             <div class="input-group">
                 <label for="passenger_type">Passenger Type</label>
                 <select id="passenger_type" required>
@@ -161,7 +145,6 @@ form .input-group select:focus {
                     <option value="occasional">Occasional</option>
                 </select>
             </div>
-
             <div class="input-group">
                 <label for="ticket_type">Ticket Type</label>
                 <select id="ticket_type" required>
@@ -170,27 +153,22 @@ form .input-group select:focus {
                     <option value="monthly">Monthly</option>
                 </select>
             </div>
-
             <div class="input-group">
                 <label for="journey_time">Journey Time</label>
                 <input type="time" id="journey_time" required>
             </div>
-
             <div class="input-group">
                 <label for="from_station">From</label>
                 <input type="text" id="from_station" required placeholder="Kolkata" autocomplete="off">
                 <div class="suggestions" id="from_suggestions"></div>
             </div>
-
             <div class="input-group">
                 <label for="destination_station">To</label>
                 <input type="text" id="destination_station" required placeholder="Sealdah" autocomplete="off">
                 <div class="suggestions" id="to_suggestions"></div>
             </div>
-
             <button type="submit" class="submit-button">Submit</button>
         </form>
-
         <p class="note-text">You can update these details anytime from your profile.</p>
     </div>
 </div>
@@ -198,71 +176,24 @@ form .input-group select:focus {
 <script>
 const form = document.getElementById('onboarding-form');
 
-// Fetch stations from backend
-async function fetchStations(query) {
-    if (!query) return [];
-    try {
-        const res = await fetch(`http://127.0.0.1:8000/stations/search?q=${encodeURIComponent(query)}`);
-        if (!res.ok) return [];
-        const data = await res.json();
-        // Map results to objects for dropdown
-        return (data.results || []).map(name => ({ name }));
-    } catch (err) {
-        console.error("Error fetching stations:", err);
-        return [];
-    }
-}
-
-function setupAutoSuggest(inputId, containerId) {
-    const input = document.getElementById(inputId);
-    const container = document.getElementById(containerId);
-
-    input.addEventListener('input', async () => {
-        const query = input.value.trim();
-        const stations = await fetchStations(query);
-        container.innerHTML = '';
-        if (stations.length > 0) {
-            container.style.display = 'block';
-            stations.forEach(station => {
-                const div = document.createElement('div');
-                div.className = 'suggestion-item';
-                div.textContent = station.name;
-                div.addEventListener('click', () => {
-                    input.value = station.name;
-                    container.style.display = 'none';
-                });
-                container.appendChild(div);
-            });
-        } else {
-            container.style.display = 'none';
-        }
-    });
-
-    // Close suggestions if clicking outside
-    document.addEventListener('click', e => {
-        if (!container.contains(e.target) && e.target !== input) container.style.display = 'none';
-    });
-}
-
-// Initialize dropdowns
-setupAutoSuggest('from_station', 'from_suggestions');
-setupAutoSuggest('destination_station', 'to_suggestions');
-
-// Form submission
-form.addEventListener('submit', e => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    const payload = {
+    // Collect form values
+    const userDetails = {
         username: document.getElementById('username').value,
         pincode: document.getElementById('pincode').value,
         passenger_type: document.getElementById('passenger_type').value,
         ticket_type: document.getElementById('ticket_type').value,
         journey_time: document.getElementById('journey_time').value,
-        from_station: document.getElementById('from_station').value,
+        source_station: document.getElementById('from_station').value,
         destination_station: document.getElementById('destination_station').value
     };
 
-    localStorage.setItem('user_info', JSON.stringify(payload));
+    // Save to localStorage (demo mode, no backend)
+    localStorage.setItem('userDetails', JSON.stringify(userDetails));
+
+    // Redirect silently to dashboard
     window.location.href = 'dashboard.html';
 });
 </script>

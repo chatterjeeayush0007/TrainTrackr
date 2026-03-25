@@ -1,64 +1,30 @@
-# app/main.py
+# main.py
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 
-# -----------------------------
-# FastAPI app
-# -----------------------------
-app = FastAPI(
-    title="TrainTrackr API",
-    description="Backend for TrainTrackr local train utility app",
-    version="1.0.0"
-)
+from app.routes import users, stations
 
-# -----------------------------
-# Enable CORS
-# -----------------------------
+app = FastAPI(title="TrainTrackr API", version="1.0.0")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins (change in production)
+    allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-# -----------------------------
-# Root / Health check
-# -----------------------------
+# Root endpoint
 @app.get("/")
 def root():
-    return {
-        "status": "running",
-        "project": "TrainTrackr"
-    }
+    return {"status": "running", "project": "TrainTrackr"}
 
-# -----------------------------
 # Include routers
-# -----------------------------
-from app.routes import trains, stations, predictions, recommendations, users, railradar
+app.include_router(users.router, prefix="/users", tags=["Users"])  # prefix here is correct now
+app.include_router(stations.router, prefix="/stations", tags=["Stations"])
 
-# Trains
-app.include_router(trains.router)
-
-# Stations
-app.include_router(stations.router)
-
-# Predictions
-app.include_router(predictions.router)
-
-# Recommendations
-app.include_router(recommendations.router)
-
-# Users
-app.include_router(users.router)
-
-# RailRadar
-app.include_router(railradar.router, prefix="/railradar", tags=["RailRadar"])
-
-# -----------------------------
 # Background simulator
-# -----------------------------
 from app.utils.simulate_trains import run_simulator_forever
 
 @app.on_event("startup")

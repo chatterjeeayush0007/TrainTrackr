@@ -1,1 +1,18 @@
+.env# Environment variables
 .env
+
+# Python cache and virtual env
+__pycache__/
+*.pyc
+venv/
+env/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Any local secrets/config files
+config.json

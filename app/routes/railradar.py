@@ -8,10 +8,12 @@ router = APIRouter(
     tags=["RailRadar"]
 )
 
-# Load API key from env or fallback
-RAILRADAR_API_KEY = os.getenv("RAILRADAR_API_KEY", "rr_b8phb55xxb21gw579lnr9y7bwdn1883w")
+# Load API key from environment variables
+RAILRADAR_API_KEY = os.getenv("RAILRADAR_API_KEY")
+if not RAILRADAR_API_KEY:
+    raise Exception("❌ RAILRADAR_API_KEY not found in environment variables. Please set it in your .env file.")
 
-# ✅ Updated Base URL to match the curl example
+# Updated Base URL to match the RailRadar API
 BASE_URL = "https://api.railradar.org/api/v1"
 
 # -----------------------------

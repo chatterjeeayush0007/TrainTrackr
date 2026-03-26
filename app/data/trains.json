@@ -74,11 +74,11 @@
         "departure": "08:45"
       }
     ],
-    "delay": 5,
-    "current_station": "Sealdah",
-    "current_index": 0,
-    "expected_arrival": "07:20",
-    "expected_departure": "07:30"
+    "delay": 6,
+    "current_station": "Bidhan Nagar Road",
+    "current_index": 1,
+    "expected_arrival": "07:38",
+    "expected_departure": "07:40"
   },
   {
     "train_no": 31335,
@@ -190,11 +190,11 @@
         "departure": "08:00"
       }
     ],
-    "delay": 8,
-    "current_station": "Khardha",
-    "current_index": 6,
-    "expected_arrival": "06:56",
-    "expected_departure": "06:58"
+    "delay": 9,
+    "current_station": "Titagarh",
+    "current_index": 7,
+    "expected_arrival": "07:01",
+    "expected_departure": "07:02"
   },
   {
     "train_no": 31438,
@@ -271,11 +271,11 @@
         "departure": null
       }
     ],
-    "delay": -2,
-    "current_station": "Titagarh",
-    "current_index": 6,
-    "expected_arrival": "07:25",
-    "expected_departure": "07:26"
+    "delay": 9,
+    "current_station": "Khardha",
+    "current_index": 7,
+    "expected_arrival": "07:41",
+    "expected_departure": "07:42"
   },
   {
     "train_no": 31316,
@@ -387,10 +387,10 @@
         "departure": null
       }
     ],
-    "delay": 4,
-    "current_station": "Naihati",
-    "current_index": 6,
-    "expected_arrival": "07:37",
+    "delay": 0,
+    "current_station": "Kankinara",
+    "current_index": 7,
+    "expected_arrival": "07:38",
     "expected_departure": "07:39"
   }
 ]

@@ -1,9 +1,14 @@
 // -----------------------------
+// Backend base URL (Render deployment)
+// -----------------------------
+const BASE_URL = "https://traintrackr.onrender.com";
+
+// -----------------------------
 // Fetch all trains with crowd (for dashboard)
 // -----------------------------
 async function fetchTrains() {
     try {
-        const res = await fetch("http://127.0.0.1:8000/predictions/all");
+        const res = await fetch(`${BASE_URL}/predictions/all`);
         const data = await res.json();
 
         const tbody = document.querySelector("#trains-table tbody");
@@ -51,7 +56,7 @@ async function saveJourneyDetails(event) {
     const nearestUl = document.getElementById("nearest-stations");
 
     try {
-        const res = await fetch("http://127.0.0.1:8000/users/details", {
+        const res = await fetch(`${BASE_URL}/users/details`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(payload)
@@ -89,7 +94,7 @@ async function findNearestStations() {
     if (!pincode) return alert("Enter pincode!");
 
     try {
-        const res = await fetch(`http://127.0.0.1:8000/users/nearest_stations?pincode=${pincode}`);
+        const res = await fetch(`${BASE_URL}/users/nearest_stations?pincode=${pincode}`);
         const stations = await res.json();
 
         const ul = document.getElementById("nearest-stations");

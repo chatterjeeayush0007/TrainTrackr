@@ -1,0 +1,123 @@
+.bg-train {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/train-bg.jpeg") center/cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg-train::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+.bg-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.details-container {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  
+  padding: clamp(30px, 5vw, 50px);
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  
+  color: white;
+  text-align: center;
+  width: 95%;
+  max-width: 500px; 
+  transition: max-width 0.3s ease;
+}
+
+@media (min-width: 1024px) {
+  .details-container {
+    max-width: 850px; 
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: left;
+  }
+
+  .form-grid input[type="time"] {
+    grid-column: span 2;
+  }
+}
+
+.details-container h2 {
+  font-size: clamp(28px, 4vw, 38px);
+  margin-bottom: 25px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.details-container input,
+.details-container select {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 14px;
+  margin-top: 15px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.details-container input:focus,
+.details-container select:focus {
+  background: #fff;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+.info-note {
+  font-size: 13px;
+  color: #ddd;
+  margin-top: 25px;
+  opacity: 0.9;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.continue-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 16px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  font-size: 17px;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.continue-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(79, 70, 229, 0.4);
+  filter: brightness(1.1);
+}

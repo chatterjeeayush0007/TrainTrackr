@@ -17,3 +17,16 @@ if ("serviceWorker" in navigator) {
       .catch((err) => console.log("SW Error:", err));
   });
 }
+// Register Service Worker
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/sw.js") // absolute path is important
+      .then((registration) => {
+        console.log("PWA Ready: Service Worker registered", registration);
+      })
+      .catch((error) => {
+        console.error("Service Worker registration failed:", error);
+      });
+  });
+}

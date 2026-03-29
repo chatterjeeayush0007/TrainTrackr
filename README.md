@@ -1,31 +1,22 @@
-# 📘 TrainTrackr
+# 🚂 TrainTrackr
 
-TrainTrackr is a **smart transit companion** that provides **local train schedules, delay predictions, platform info, and crowd estimations**. Powered by a Python FastAPI backend, it helps commuters **plan faster routes and travel with confidence**.
+**TrainTrackr** is a smart transit companion designed to make commuting smoother and more predictable. Powered by a lightning-fast Python FastAPI backend, it provides commuters with local train schedules, heuristic delay predictions, platform details, and station crowd estimations to help plan faster, safer routes.
 
 ---
 
-## 🚀 Features
+## ✨ Key Features
 
-* **Train Listing & Details**
-  List all trains, fetch details by train number, get full route (stops).
-
-* **Station Listing & Search**
-  Return all stations or search by query.
-
-* **Delay Prediction**
-  Heuristic-based train delay predictions and expected arrival times.
-
-* **Crowd Estimation**
-  Estimate crowd levels (Low / Medium / High) at stations.
-
-* **Clean API Structure**
-  FastAPI backend with modular routes and CORS-enabled.
+* **🚆 Train & Route Management:** View all available trains, fetch specific train details by number, and map out complete stop-by-stop routes.
+* **🚉 Station Intelligence:** Browse the full list of stations or use the search functionality to find specific transit hubs instantly.
+* **⏱️ Delay Predictions:** Get heuristic-based estimates for train delays and dynamically updated arrival times.
+* **👥 Crowd Estimation:** Check expected crowd densities (Low / Medium / High) at specific stations before you arrive.
+* **⚡ Modern API Architecture:** Built on FastAPI for high performance, featuring modular routing, schema validation, and built-in CORS support.
 
 ---
 
 ## 📂 Project Structure
 
-```
+```text
 TRAINTRACKR-1/
 ├── .venv/
 ├── .vscode/
@@ -105,62 +96,58 @@ TRAINTRACKR-1/
 ├── .env
 ├── .gitignore
 ├── README.md
-└── requirements.txt```
+└── requirements.txt
 
----
+⚡ Installation & Setup
 
-## ⚡ Installation
+1. Clone the repository
+Bash
 
-1. **Clone the repo**
+git clone https://github.com/chatterjeeayush0007/TrainTrackr
+cd TRAINTRACKR-1
 
-```bash
-git clone <repo-url>
-cd TrainTrackr
-```
+2. Create and activate a virtual environment
+Bash
 
-2. **Create virtual environment**
+python -m venv .venv
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Linux/Mac
-venv\Scripts\activate     # Windows
-```
+# On Linux/Mac:
+source .venv/bin/activate 
 
-3. **Install dependencies**
+# On Windows:
+.\.venv\Scripts\activate
 
-```bash
+3. Install backend dependencies
+Bash
+
 pip install -r requirements.txt
-```
 
----
+🏃 Running the Server
 
-## 🏃 Running the Server
+Start the FastAPI backend server using Uvicorn:
+Bash
 
-```bash
 uvicorn app.main:app --reload
-```
 
-* Swagger UI: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
-* Health check: `GET /`
+    Interactive API Docs (Swagger UI): http://127.0.0.1:8000/docs
 
----
+    Health Check: GET /
 
-## 🛠 API Endpoints Overview
+🛠 API Endpoints Overview
+Endpoint	Method	Description
+/trains	GET	Retrieve a list of all available trains.
+/trains/{train_no}	GET	Fetch specific details for a train by its number.
+/trains/{train_no}/route	GET	Get the full stop-by-stop route for a specific train.
+/stations	GET	Retrieve a list of all stations.
+/stations/search?q=	GET	Search for stations by name or code.
+/predictions/delay/{train_no}	GET	Get heuristic predictions for train delays.
+/crowd/{station}	GET	Estimate the current/expected crowd level at a station.
+🧩 Current Status & Roadmap
 
-| Endpoint                        | Method | Description             |
-| ------------------------------- | ------ | ----------------------- |
-| `/trains`                       | GET    | List all trains         |
-| `/trains/{train_no}`            | GET    | Train details by number |
-| `/trains/{train_no}/route`      | GET    | Full train route        |
-| `/stations`                     | GET    | List all stations       |
-| `/stations/search?q=`           | GET    | Search stations         |
-| `/predictions/delay/{train_no}` | GET    | Predict train delay     |
-| `/crowd/{station}`              | GET    | Estimate station crowd  |
+    Data Source: Currently utilizes static JSON data (trains.json, mock_users.json) for safe testing and development.
 
----
+    Logic-Based Estimates: Delay predictions and crowd estimations are currently driven by internal heuristic logic and population modeling.
 
-## 🧩 Notes
+    In Progress (Roadmap): * Full integration of the React/Vite UI (frontend/gui).
 
-* Currently **static data** from `trains.json`
-* Delay predictions and crowd estimations are **heuristic-based**
-* Frontend/UI and real-time GPS integration are **future enhancements**
+        Real-time GPS tracking and live mapping via LocationIQ.

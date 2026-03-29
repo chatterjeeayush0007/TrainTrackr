@@ -1,6 +1,10 @@
-from fastapi import APIRouter, HTTPException # pyright: ignore[reportMissingImports]
+# app/routes/trains.py
+
+from fastapi import APIRouter, HTTPException  # pyright: ignore[reportMissingImports]
 import json
 from pathlib import Path
+from app.utils.crowd_predict import CrowdPredictor
+from app.db.mongodb import get_users_collection  # your existing helper
 
 router = APIRouter(
     prefix="/trains",
@@ -8,6 +12,10 @@ router = APIRouter(
 )
 
 DATA_PATH = Path(__file__).resolve().parent.parent / "data" / "trains.json"
+
+# Initialize crowd predictor
+users_collection = get_users_collection()
+crowd_predictor = CrowdPredictor(users_collection)
 
 
 def load_trains():
@@ -20,19 +28,38 @@ def load_trains():
     return data
 
 
+def get_crowd_level(user_count: int):
+    """Convert user count to Low/Medium/High"""
+    if user_count < 50:
+        return "Low"
+    elif user_count < 150:
+        return "Medium"
+    else:
+        return "High"
+
+
 @router.get("/")
 def get_all_trains():
     """
-    Returns basic info of all trains
+    Returns basic info of all trains with optional crowd level
     """
     data = load_trains()
-    trains = [
-        {
+    trains = []
+
+    for train in data:
+        current_station = train.get("current_station")
+        delay = train.get("delay", 0)
+        user_count = crowd_predictor.predict_crowd_for_train(train.get("train_no"))
+        crowd_level = get_crowd_level(user_count)
+
+        trains.append({
             "train_no": train.get("train_no"),
-            "train_name": train.get("train_name")
-        }
-        for train in data
-    ]
+            "train_name": train.get("train_name"),
+            "current_station": current_station,
+            "delay": delay,
+            "crowd_level": crowd_level
+        })
+
     return {
         "count": len(trains),
         "trains": trains
@@ -42,7 +69,7 @@ def get_all_trains():
 @router.get("/{train_no}")
 def get_train_by_number(train_no: int):
     """
-    Returns full details of a specific train, including live status and expected times
+    Returns full details of a specific train, including live status, expected times, and crowd level
     """
     data = load_trains()
     train = next((t for t in data if t.get("train_no") == train_no), None)
@@ -50,9 +77,12 @@ def get_train_by_number(train_no: int):
     if not train:
         raise HTTPException(status_code=404, detail="Train not found")
 
-    # Include current station and delay
     current_station = train.get("current_station")
     delay = train.get("delay", 0)
+
+    # Predict crowd level at current station
+    user_count = crowd_predictor.predict_crowd_for_train(train_no)
+    crowd_level = get_crowd_level(user_count)
 
     # Build route with expected arrival/departure times
     route = []
@@ -61,7 +91,6 @@ def get_train_by_number(train_no: int):
             "station": stop.get("station"),
             "scheduled_arrival": stop.get("arrival"),
             "scheduled_departure": stop.get("departure"),
-            # If this is current station, show expected times from JSON
             "expected_arrival": train.get("expected_arrival") if stop.get("station") == current_station else stop.get("arrival"),
             "expected_departure": train.get("expected_departure") if stop.get("station") == current_station else stop.get("departure")
         })
@@ -71,6 +100,7 @@ def get_train_by_number(train_no: int):
         "train_name": train.get("train_name"),
         "current_station": current_station,
         "delay_minutes": delay,
+        "crowd_level": crowd_level,
         "route": route
     }
 

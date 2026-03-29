@@ -26,36 +26,86 @@ TrainTrackr is a **smart transit companion** that provides **local train schedul
 ## 📂 Project Structure
 
 ```
-TrainTrackr/
+TRAINTRACKR-1/
+├── .venv/
+├── .vscode/
 ├── app/
-│   ├── main.py
 │   ├── data/
+│   │   ├── mock_users.json
+│   │   ├── pincode_population.json
 │   │   └── trains.json
+│   ├── db/
+│   │   ├── __init__.py
+│   │   └── mongodb.py
+│   ├── models/
+│   │   ├── travel.py
+│   │   └── user.py
 │   ├── routes/
-│   │   ├── trains.py
-│   │   ├── stations.py
-│   │   ├── recommendations.py
+│   │   ├── __init__.py
 │   │   ├── predictions.py
-│   │   └── crowd.py
+│   │   ├── railradar.py
+│   │   ├── recommendations.py
+│   │   ├── stations.py
+│   │   ├── trains.py
+│   │   └── users.py
+│   ├── schemas/
+│   │   ├── __init__.py
+│   │   └── user_schema.py
 │   ├── utils/
+│   │   ├── __init__.py
+│   │   ├── config.py
+│   │   ├── crowd_predict.py
 │   │   ├── delay_predict.py
+│   │   ├── gps_mapper.py
+│   │   ├── locationiq_mapper.py
+│   │   ├── populate_stations.py
+│   │   ├── population_model.py
 │   │   ├── simulate_trains.py
 │   │   ├── time_calc.py
 │   │   └── train_assistant_logic.py
+│   ├── main.py
 │   ├── models.py
-│   ├── train_assistant.py
-│   └── schemas.py
-├── gui/
-│   ├── dashboard.html
-│   ├── details.html
-│   ├── index.html
-│   ├── profile.html
-│   ├── script.js
-│   ├── style.css
-│   └── train.assistant.js
+│   ├── schemas.py
+│   └── train_assistant.py
+├── frontend/
+│   └── gui/
+│       ├── dist/
+│       │   ├── assets/
+│       │   ├── favicon.svg
+│       │   ├── icon.png
+│       │   ├── icons.svg
+│       │   ├── index.html
+│       │   ├── manifest.json
+│       │   ├── sw.js
+│       │   └── train-bg.jpeg
+│       ├── public/
+│       │   ├── favicon.svg
+│       │   ├── icon.png
+│       │   ├── icons.svg
+│       │   ├── manifest.json
+│       │   ├── sw.js
+│       │   └── train-bg.jpeg
+│       ├── src/
+│       │   ├── assets/
+│       │   ├── pages/
+│       │   ├── styles/
+│       │   ├── App.css
+│       │   ├── App.jsx
+│       │   ├── firebase.js
+│       │   ├── index.css
+│       │   └── main.jsx
+│       ├── .gitignore
+│       ├── eslint.config.js
+│       ├── index.html
+│       ├── package-lock.json
+│       ├── package.json
+│       ├── README.md
+│       └── vite.config.js
+├── venv/
+├── .env
+├── .gitignore
 ├── README.md
-└── requirements.txt
-```
+└── requirements.txt```
 
 ---
 

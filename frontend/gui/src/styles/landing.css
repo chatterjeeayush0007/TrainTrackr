@@ -1,3 +1,8 @@
+/* ------------------------------
+   Landing Page CSS - TrainTrackr
+---------------------------------*/
+
+/* Container and background */
 .container {
   height: 100vh;
   display: flex;
@@ -23,6 +28,7 @@
   z-index: 1;
 }
 
+/* Card */
 .card {
   position: relative; 
   z-index: 2; 
@@ -48,20 +54,34 @@
   }
 }
 
-.title {
-  font-size: clamp(36px, 6vw, 64px); 
-  font-weight: 800;
-  margin-bottom: 15px;
-  letter-spacing: -1.5px;
+/* ------------------------------
+   Title & Subtitle
+---------------------------------*/
+
+/* Title with Merienda font and deep purple */
+.title-gradient {
+  font-family: 'Merienda', cursive;
+  font-weight: 700;
+  font-size: clamp(36px, 6vw, 64px);
+  margin-bottom: 25px;
+  color: #342384e3; /* deep purple */
 }
 
+/* Subtitle font */
 .subtitle {
+  font-family: 'Merienda', cursive; /* simple & clean */
+  font-weight: 400;
   font-size: clamp(16px, 2vw, 22px);
   opacity: 0.9;
-  margin-bottom: 35px;
-  font-weight: 300;
+  margin-bottom: 50px; /* gap from button */
+  letter-spacing: 1px;
 }
 
+/* ------------------------------
+   Buttons
+---------------------------------*/
+
+/* Get Started Button */
 .btn {
   padding: 16px 32px; 
   font-size: 18px;
@@ -79,6 +99,47 @@
   transform: scale(1.05) translateY(-2px);
   box-shadow: 0 10px 20px rgba(14, 165, 233, 0.4);
 }
+
+/* Login / Continue Button */
+.login-btn {
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5);
+}
+
+/* Google Sign-In button */
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.google-icon {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  color: white;
+}
+
+/* ------------------------------
+   Modal
+---------------------------------*/
 
 .modal-overlay {
   position: fixed;
@@ -134,26 +195,7 @@
   box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
 }
 
-.login-btn {
-  box-sizing: border-box;
-  width: 100%;
-  margin-top: 20px;
-  padding: 14px;
-  border-radius: 12px;
-  border: none;
-  font-size: 16px;
-  font-weight: 700;
-  background: linear-gradient(135deg, #4f46e5, #7c3aed);
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.login-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(79, 70, 229, 0.5);
-}
-
+/* Close Button */
 .close {
   position: absolute;
   top: 15px;
@@ -168,9 +210,36 @@
 
 .close:hover { opacity: 1; }
 
+/* Auth subtitles / notes */
 .auth-subtitle { font-size: 14px; color: #eee; margin-bottom: 15px; }
 .auth-note { font-size: 12px; margin-top: 15px; color: #ccc; text-align: center; line-height: 1.4; }
 
+/* ------------------------------
+   OR Separator
+---------------------------------*/
+.or-separator {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 12px 0;
+  font-size: 14px;
+  color: #ccc;
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.or-separator::before,
+.or-separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 0 10px;
+}
+
+/* ------------------------------
+   Animations
+---------------------------------*/
 @keyframes fadeIn {
   from {
     opacity: 0;

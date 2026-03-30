@@ -16,7 +16,6 @@
 
 ## 📂 Project Structure
 
-```text
 TRAINTRACKR-1/
 ├── .venv/
 ├── .vscode/

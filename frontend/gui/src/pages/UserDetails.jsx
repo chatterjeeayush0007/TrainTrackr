@@ -43,7 +43,7 @@ export default function UserDetails() {
     navigate("/dashboard");
   };
 
-  if (loadingUser) return <p>Loading user details...</p>;
+  if (loadingUser) return <div className="bg-train"><p style={{color: 'white', fontSize: '18px'}}>Loading user details...</p></div>;
 
   return (
     <div className="bg-train">
@@ -73,7 +73,7 @@ export default function UserDetails() {
 
             <select name="type" value={form.type} onChange={handleChange}>
               <option value="daily">Daily Passenger</option>
-              <option value="occasional">Occasional</option>
+              <option value="occasional">Occasional Passenger</option>
             </select>
 
             <select
@@ -113,7 +113,7 @@ export default function UserDetails() {
           </p>
 
           <button className="continue-btn" onClick={handleSubmit}>
-            Continue →
+            Continue
           </button>
         </div>
       </div>

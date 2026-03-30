@@ -3,7 +3,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 
-from app.routes import users, stations
+# 1️⃣ ADDED 'trains' to the imports here:
+from app.routes import users, stations, trains
 
 app = FastAPI(title="TrainTrackr API", version="1.0.0")
 
@@ -21,8 +22,10 @@ def root():
     return {"status": "running", "project": "TrainTrackr"}
 
 # Include routers
-app.include_router(users.router, prefix="/users", tags=["Users"])  # prefix here is correct now
+app.include_router(users.router, prefix="/users", tags=["Users"])  
 app.include_router(stations.router, prefix="/stations", tags=["Stations"])
+# 2️⃣ ADDED the trains router here:
+app.include_router(trains.router, prefix="/trains", tags=["Trains"])
 
 # Background simulator
 from app.utils.simulate_trains import run_simulator_forever

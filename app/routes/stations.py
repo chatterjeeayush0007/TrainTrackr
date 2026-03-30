@@ -1,5 +1,6 @@
 from fastapi import APIRouter, HTTPException
 import json
+import random  # Added to simulate live crowd data
 from pathlib import Path
 
 router = APIRouter(tags=["Stations"])  # prefix moved to main.py
@@ -38,3 +39,18 @@ def search_stations(query: str = ""):
             if query.lower() in station.lower():
                 results.add(station)
     return {"stations": sorted(results)}
+
+# --- NEW ENDPOINT: Crowd Simulation ---
+@router.get("/crowd/{station_name}")
+def get_station_crowd(station_name: str):
+    """
+    Returns a simulated real-time crowd level for the requested station.
+    """
+    # Randomly assign a crowd level for the simulation
+    levels = ["Low", "Medium", "High"]
+    current_crowd = random.choice(levels)
+    
+    return {
+        "station": station_name,
+        "crowd_level": current_crowd
+    }

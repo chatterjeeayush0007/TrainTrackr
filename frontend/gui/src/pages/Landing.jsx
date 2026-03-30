@@ -64,8 +64,11 @@ export default function Landing() {
               ×
             </button>
 
-            <h2>Login / Signup</h2>
-            <p className="auth-subtitle">Enter your details to continue</p>
+            {/* Centered Header Wrapper */}
+            <div className="form-header">
+              <h2>Login / Signup</h2>
+              <p>Enter your details to continue</p>
+            </div>
 
             {error && <p className="auth-error">{error}</p>}
 
@@ -103,7 +106,7 @@ export default function Landing() {
 
             {/* Continue button */}
             <button className="login-btn" onClick={handleEmailSignIn}>
-              Continue →
+              Continue
             </button>
           </div>
         </div>

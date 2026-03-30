@@ -8,9 +8,16 @@ from app.routes import users, stations, trains
 
 app = FastAPI(title="TrainTrackr API", version="1.0.0")
 
+# 2️⃣ UPDATED: Added specific origins for better mobile compatibility
+origins = [
+    "http://localhost:5173",
+    "https://train-trackr-3oz9klk8f-chatterjeeayush0007s-projects.vercel.app",
+    "https://train-trackr-84ai.vercel.app",
+]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=origins, # Using the explicit list instead of "*"
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -32,4 +39,5 @@ from app.utils.simulate_trains import run_simulator_forever
 
 @app.on_event("startup")
 async def start_background_simulator():
+    # This runs the simulator in the background
     asyncio.create_task(run_simulator_forever(interval_seconds=60))

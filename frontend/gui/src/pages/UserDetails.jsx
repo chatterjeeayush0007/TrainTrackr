@@ -5,7 +5,6 @@ import { auth } from "../firebase";
 
 export default function UserDetails() {
   const navigate = useNavigate();
-
   const storedDetails = JSON.parse(localStorage.getItem("userDetails")) || {};
 
   const [form, setForm] = useState({
@@ -19,9 +18,6 @@ export default function UserDetails() {
     time: storedDetails.time || "",
   });
 
-  const [loadingUser, setLoadingUser] = useState(true);
-
-  // Prefill from Firebase user if available
   useEffect(() => {
     const user = auth.currentUser;
     if (user) {
@@ -31,7 +27,6 @@ export default function UserDetails() {
         email: prev.email || user.email || "",
       }));
     }
-    setLoadingUser(false);
   }, []);
 
   const handleChange = (e) => {
@@ -43,78 +38,24 @@ export default function UserDetails() {
     navigate("/dashboard");
   };
 
-  if (loadingUser) return <div className="bg-train"><p style={{color: 'white', fontSize: '18px'}}>Loading user details...</p></div>;
-
   return (
     <div className="bg-train">
       <div className="bg-content">
         <div className="details-container">
           <h2>Journey Details</h2>
-
           <div className="form-grid">
-            <input
-              name="name"
-              placeholder="Full Name"
-              value={form.name}
-              onChange={handleChange}
-            />
-            <input
-              name="email"
-              placeholder="Email"
-              value={form.email}
-              onChange={handleChange}
-            />
-            <input
-              name="pincode"
-              placeholder="Pincode"
-              value={form.pincode}
-              onChange={handleChange}
-            />
-
+            <input name="name" placeholder="Full Name" value={form.name} onChange={handleChange} />
+            <input name="email" placeholder="Email" value={form.email} onChange={handleChange} />
+            <input name="pincode" placeholder="Pincode" value={form.pincode} onChange={handleChange} />
             <select name="type" value={form.type} onChange={handleChange}>
               <option value="daily">Daily Passenger</option>
-              <option value="occasional">Occasional Passenger</option>
+              <option value="occasional">Occasional</option>
             </select>
-
-            <select
-              name="ticketType"
-              value={form.ticketType}
-              onChange={handleChange}
-            >
-              <option value="single">Single Journey</option>
-              <option value="return">Return Journey</option>
-              <option value="seasonal">Seasonal Pass</option>
-            </select>
-
-            <input
-              name="from"
-              placeholder="From Station"
-              value={form.from}
-              onChange={handleChange}
-            />
-            <input
-              name="to"
-              placeholder="To Station"
-              value={form.to}
-              onChange={handleChange}
-            />
-
-            <input
-              type="time"
-              name="time"
-              value={form.time}
-              onChange={handleChange}
-            />
+            <input name="from" placeholder="From Station" value={form.from} onChange={handleChange} />
+            <input name="to" placeholder="To Station" value={form.to} onChange={handleChange} />
+            <input type="time" name="time" value={form.time} onChange={handleChange} />
           </div>
-
-          <p className="info-note">
-            The data collected is essential for better crowd prediction and
-            commute optimization.
-          </p>
-
-          <button className="continue-btn" onClick={handleSubmit}>
-            Continue
-          </button>
+          <button className="continue-btn" onClick={handleSubmit}>Continue →</button>
         </div>
       </div>
     </div>

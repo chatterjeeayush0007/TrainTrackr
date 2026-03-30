@@ -3,7 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 import "../styles/dashboard.css";
 
-const BASE_URL = "http://127.0.0.1:8000";
+// UPDATED TO RENDER LINK
+const BASE_URL = "https://traintrackr.onrender.com";
 
 export default function Dashboard() {
   const navigate = useNavigate();
@@ -22,15 +23,14 @@ export default function Dashboard() {
   const userType = storedDetails.type || "daily";
 
   const getCrowdColor = (level) => {
-    if (level === "Low") return "#4ade80"; // Brighter green for dark mode
-    if (level === "Medium") return "#fbbf24"; // Brighter yellow/orange
-    if (level === "High") return "#f87171"; // Brighter red
+    if (level === "Low") return "#4ade80"; 
+    if (level === "Medium") return "#fbbf24"; 
+    if (level === "High") return "#f87171"; 
     return "#9ca3af";
   };
 
   const handleSearch = async () => {
     if (!from || !to || !time) return;
-
     setLoading(true);
     setShowResults(false);
 
@@ -38,7 +38,6 @@ export default function Dashboard() {
       const trainsResp = await fetch(`${BASE_URL}/trains/`);
       const trainsData = await trainsResp.json();
       const allTrains = trainsData.trains || [];
-
       const slots = {};
 
       for (const train of allTrains) {
@@ -48,21 +47,17 @@ export default function Dashboard() {
 
         const startIndex = stops.findIndex(s => s.station.toLowerCase() === from.toLowerCase());
         const destIndex = stops.findIndex(s => s.station.toLowerCase() === to.toLowerCase());
+        
         if (startIndex < 0 || destIndex < 0 || startIndex >= destIndex) continue;
 
         const startStop = stops[startIndex];
-        if (!startStop.departure) continue;
-
-        if (startStop.departure < time) continue;
+        if (!startStop.departure || startStop.departure < time) continue;
 
         const [hourStr, minStr] = startStop.departure.split(":");
         const hour = parseInt(hourStr);
         const minute = parseInt(minStr);
         const slotStart = `${hour.toString().padStart(2,"0")}:${(Math.floor(minute/30)*30).toString().padStart(2,"0")}`;
-        const slotEndHour = minute < 30 ? hour : (hour + 1) % 24;
-        const slotEndMin = minute < 30 ? 29 : 59;
-        const slotEnd = `${slotEndHour.toString().padStart(2,"0")}:${slotEndMin.toString().padStart(2,"0")}`;
-        const slotKey = `${slotStart}-${slotEnd}`;
+        const slotKey = `${slotStart} onwards`;
 
         if (!slots[slotKey]) slots[slotKey] = [];
 
@@ -82,12 +77,10 @@ export default function Dashboard() {
           crowd
         });
       }
-
       setTrainSlots(slots);
     } catch (err) {
       console.error("Error fetching trains:", err);
     }
-
     setLoading(false);
     setShowResults(true);
   };
@@ -113,45 +106,21 @@ export default function Dashboard() {
           <button onClick={handleSearch}>Search Trains</button>
         </div>
 
-        {loading && <div className="loader" style={{marginTop: '20px', color: 'white'}}>Loading...</div>}
+        {loading && <p style={{color: 'white', marginTop: '20px'}}>Waking up server... (First search may take 30s)</p>}
 
         {showResults && (
-          <div className="train-list" style={{ maxHeight: '55vh', overflowY: 'auto', paddingRight: '10px', marginTop: '20px' }}>
-            <h2 style={{fontFamily: "'Merienda', cursive", fontSize:'24px', color: 'white', textShadow: '0 2px 4px rgba(0,0,0,0.5)'}}>
-              Available Trains
-            </h2>
-            {Object.keys(trainSlots).length === 0 && <p style={{color: 'white'}}>No trains available for the selected time.</p>}
+          <div className="train-list" style={{ maxHeight: '50vh', overflowY: 'auto', marginTop: '20px' }}>
+            <h2 style={{fontFamily: "'Merienda', cursive", color: 'white'}}>Available Trains</h2>
+            {Object.keys(trainSlots).length === 0 && <p style={{color: 'white'}}>No trains found.</p>}
             
-            {Object.entries(trainSlots)
-              .sort((a, b) => a[0].localeCompare(b[0])) 
-              .map(([slot, trains]) => (
+            {Object.entries(trainSlots).map(([slot, trains]) => (
               <div key={slot}>
-                <h3 style={{
-                  fontFamily: "'Poppins', sans-serif",
-                  fontWeight: '600',
-                  margin:"15px 0 10px 0", 
-                  position: 'sticky', 
-                  top: 0, 
-                  backgroundColor: 'rgba(30, 30, 30, 0.95)', 
-                  color: 'white',
-                  padding: '8px 12px', 
-                  borderRadius: '8px', 
-                  zIndex: 1,
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.3)'
-                }}>
-                  {slot}
-                </h3>
-                
-                {trains
-                  .sort((a, b) => a.departure.localeCompare(b.departure))
-                  .map((train, index) => (
+                <h3 className="slot-header">{slot}</h3>
+                {trains.map((train, index) => (
                   <div className="train-card" key={index}>
                     <h3>{train.train_name}</h3>
-                    <p><strong>Departure:</strong> {train.departure} &nbsp;•&nbsp; <strong>Arrival:</strong> {train.arrival}</p>
-                    <p><strong>Delay:</strong> {train.delay} min</p>
-                    <p style={{color: getCrowdColor(train.crowd), fontWeight: '600', marginTop: '8px'}}>
-                      Crowd Level: {train.crowd}
-                    </p>
+                    <p>Dep: {train.departure} • Arr: {train.arrival}</p>
+                    <p style={{color: getCrowdColor(train.crowd), fontWeight: 'bold'}}>Crowd: {train.crowd}</p>
                   </div>
                 ))}
               </div>

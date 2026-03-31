@@ -491,6 +491,28 @@
         "crowd_percentage": 5
       },
       {
+        "train_no": 31442,
+        "train_name": "Naihati - Sealdah Local",
+        "stops": [
+          { "station": "Naihati", "arrival": "08:00", "departure": "08:02" },
+          { "station": "Barrackpore", "arrival": "08:18", "departure": "08:20" },
+          { "station": "Titagarh", "arrival": "08:24", "departure": "08:25" },
+          { "station": "Khardaha", "arrival": "08:28", "departure": "08:30" },
+          { "station": "Sodepur", "arrival": "08:34", "departure": "08:36" },
+          { "station": "Agarpara", "arrival": "08:40", "departure": "08:42" },
+          { "station": "Belgharia", "arrival": "08:46", "departure": "08:48" },
+          { "station": "Dum Dum Junction", "arrival": "08:54", "departure": "08:56" },
+          { "station": "Bidhan Nagar Road", "arrival": "09:02", "departure": "09:04" },
+          { "station": "Sealdah", "arrival": "09:12", "departure": null }
+        ],
+        "delay": 2,
+        "current_station": "Barrackpore",
+        "current_index": 1,
+        "expected_arrival": "08:20",
+        "expected_departure": "08:22",
+        "crowd_percentage": 85
+      },
+      {
         "train_no": 31336,
         "train_name": "Sealdah - Kalyani Simanta Local",
         "stops": [
@@ -727,6 +749,27 @@
         "expected_arrival": "09:27",
         "expected_departure": "09:29",
         "crowd_percentage": 5
+      },
+      {
+        "train_no": 31336,
+        "train_name": "Barrackpore - Sealdah Local",
+        "stops": [
+          { "station": "Barrackpore", "arrival": "09:15", "departure": "09:18" },
+          { "station": "Titagarh", "arrival": "09:21", "departure": "09:22" },
+          { "station": "Khardaha", "arrival": "09:25", "departure": "09:27" },
+          { "station": "Sodepur", "arrival": "09:31", "departure": "09:33" },
+          { "station": "Agarpara", "arrival": "09:37", "departure": "09:39" },
+          { "station": "Belgharia", "arrival": "09:43", "departure": "09:45" },
+          { "station": "Dum Dum Junction", "arrival": "09:51", "departure": "09:53" },
+          { "station": "Bidhan Nagar Road", "arrival": "09:58", "departure": "10:00" },
+          { "station": "Sealdah", "arrival": "10:10", "departure": null }
+        ],
+        "delay": 0,
+        "current_station": "Barrackpore",
+        "current_index": 0,
+        "expected_arrival": "09:15",
+        "expected_departure": "09:18",
+        "crowd_percentage": 60
       },
       {
         "train_no": 31337,
@@ -2631,6 +2674,29 @@
         "expected_arrival": "17:23",
         "expected_departure": "17:25",
         "crowd_percentage": 5
+      },
+      {
+        "train_no": 31922,
+        "train_name": "Gede - Sealdah Local",
+        "stops": [
+          { "station": "Gede", "arrival": "15:45", "departure": "15:50" },
+          { "station": "Naihati", "arrival": "17:00", "departure": "17:05" },
+          { "station": "Barrackpore", "arrival": "17:20", "departure": "17:22" },
+          { "station": "Titagarh", "arrival": "17:26", "departure": "17:27" },
+          { "station": "Khardaha", "arrival": "17:30", "departure": "17:32" },
+          { "station": "Sodepur", "arrival": "17:36", "departure": "17:38" },
+          { "station": "Agarpara", "arrival": "17:42", "departure": "17:44" },
+          { "station": "Belgharia", "arrival": "17:48", "departure": "17:50" },
+          { "station": "Dum Dum Junction", "arrival": "17:56", "departure": "17:58" },
+          { "station": "Bidhan Nagar Road", "arrival": "18:04", "departure": "18:06" },
+          { "station": "Sealdah", "arrival": "18:15", "departure": null }
+        ],
+        "delay": 5,
+        "current_station": "Naihati",
+        "current_index": 1,
+        "expected_arrival": "17:05",
+        "expected_departure": "17:10",
+        "crowd_percentage": 95
       },
       {
         "train_no": 31345,

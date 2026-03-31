@@ -47,11 +47,11 @@
             "departure": "06:53"
           }
         ],
-        "delay": 5,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "06:37",
-        "expected_departure": "06:39",
+        "delay": 4,
+        "current_station": "Agarpara",
+        "current_index": 4,
+        "expected_arrival": "06:42",
+        "expected_departure": "06:44",
         "crowd_percentage": 5
       },
       {
@@ -94,11 +94,11 @@
             "departure": "06:55"
           }
         ],
-        "delay": -1,
-        "current_station": "Agarpara",
-        "current_index": 4,
-        "expected_arrival": "06:41",
-        "expected_departure": "06:43",
+        "delay": 5,
+        "current_station": "Sodepur",
+        "current_index": 5,
+        "expected_arrival": "06:53",
+        "expected_departure": "06:55",
         "crowd_percentage": 5
       }
     ]
@@ -146,11 +146,11 @@
             "departure": "07:06"
           }
         ],
-        "delay": 2,
-        "current_station": "Palta",
-        "current_index": 4,
-        "expected_arrival": "06:56",
-        "expected_departure": "06:57",
+        "delay": 7,
+        "current_station": "Barrackpore",
+        "current_index": 5,
+        "expected_arrival": "07:05",
+        "expected_departure": "07:07",
         "crowd_percentage": 5
       },
       {
@@ -193,11 +193,11 @@
             "departure": "07:05"
           }
         ],
-        "delay": -2,
-        "current_station": "Kanchrapara",
-        "current_index": 4,
-        "expected_arrival": "06:53",
-        "expected_departure": "06:54",
+        "delay": 10,
+        "current_station": "Halishar",
+        "current_index": 5,
+        "expected_arrival": "07:09",
+        "expected_departure": "07:10",
         "crowd_percentage": 5
       }
     ]
@@ -245,11 +245,11 @@
             "departure": "07:54"
           }
         ],
-        "delay": 5,
-        "current_station": "Sodepur",
-        "current_index": 5,
-        "expected_arrival": "07:52",
-        "expected_departure": "07:54",
+        "delay": 9,
+        "current_station": "Khardaha",
+        "current_index": 6,
+        "expected_arrival": "08:01",
+        "expected_departure": "08:03",
         "crowd_percentage": 5
       },
       {
@@ -302,11 +302,11 @@
             "departure": null
           }
         ],
-        "delay": -1,
-        "current_station": "Naihati",
-        "current_index": 7,
-        "expected_arrival": "07:54",
-        "expected_departure": "07:54",
+        "delay": -2,
+        "current_station": "Gede",
+        "current_index": 8,
+        "expected_arrival": "09:03",
+        "expected_departure": "23:58",
         "crowd_percentage": 5
       }
     ]
@@ -364,11 +364,11 @@
             "departure": "08:24"
           }
         ],
-        "delay": 6,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "07:46",
-        "expected_departure": "07:48",
+        "delay": 3,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "07:50",
+        "expected_departure": "07:52",
         "crowd_percentage": 5
       },
       {
@@ -421,11 +421,11 @@
             "departure": null
           }
         ],
-        "delay": 6,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "08:08",
-        "expected_departure": "08:08",
+        "delay": 2,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "08:09",
+        "expected_departure": "08:09",
         "crowd_percentage": 5
       }
     ]
@@ -483,11 +483,11 @@
             "departure": "08:59"
           }
         ],
-        "delay": -1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "08:14",
-        "expected_departure": "08:16",
+        "delay": 8,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "08:30",
+        "expected_departure": "08:32",
         "crowd_percentage": 5
       },
       {
@@ -540,11 +540,11 @@
             "departure": "09:09"
           }
         ],
-        "delay": 5,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "08:35",
-        "expected_departure": "08:37",
+        "delay": 6,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "08:43",
+        "expected_departure": "08:45",
         "crowd_percentage": 5
       }
     ]
@@ -603,10 +603,10 @@
           }
         ],
         "delay": -2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "08:38",
-        "expected_departure": "08:40",
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "08:45",
+        "expected_departure": "08:47",
         "crowd_percentage": 5
       },
       {
@@ -659,11 +659,11 @@
             "departure": null
           }
         ],
-        "delay": 9,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "09:11",
-        "expected_departure": "09:11",
+        "delay": 7,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "09:14",
+        "expected_departure": "09:14",
         "crowd_percentage": 5
       }
     ]
@@ -721,11 +721,11 @@
             "departure": "09:59"
           }
         ],
-        "delay": 0,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "09:15",
-        "expected_departure": "09:17",
+        "delay": 5,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "09:27",
+        "expected_departure": "09:29",
         "crowd_percentage": 5
       },
       {
@@ -778,11 +778,11 @@
             "departure": "10:09"
           }
         ],
-        "delay": 1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "09:31",
-        "expected_departure": "09:33",
+        "delay": -2,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "09:35",
+        "expected_departure": "09:37",
         "crowd_percentage": 5
       }
     ]
@@ -840,11 +840,11 @@
             "departure": "10:24"
           }
         ],
-        "delay": 10,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "09:50",
-        "expected_departure": "09:52",
+        "delay": 5,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "09:52",
+        "expected_departure": "09:54",
         "crowd_percentage": 5
       },
       {
@@ -897,11 +897,11 @@
             "departure": null
           }
         ],
-        "delay": 3,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "10:05",
-        "expected_departure": "10:05",
+        "delay": 7,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "10:14",
+        "expected_departure": "10:14",
         "crowd_percentage": 5
       }
     ]
@@ -959,11 +959,11 @@
             "departure": "10:59"
           }
         ],
-        "delay": 6,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "10:21",
-        "expected_departure": "10:23",
+        "delay": 10,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "10:32",
+        "expected_departure": "10:34",
         "crowd_percentage": 5
       },
       {
@@ -1016,11 +1016,11 @@
             "departure": "11:09"
           }
         ],
-        "delay": 2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "10:32",
-        "expected_departure": "10:34",
+        "delay": 7,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "10:44",
+        "expected_departure": "10:46",
         "crowd_percentage": 5
       }
     ]
@@ -1078,11 +1078,11 @@
             "departure": "11:24"
           }
         ],
-        "delay": 1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "10:41",
-        "expected_departure": "10:43",
+        "delay": 8,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "10:55",
+        "expected_departure": "10:57",
         "crowd_percentage": 5
       },
       {
@@ -1135,11 +1135,11 @@
             "departure": null
           }
         ],
-        "delay": 6,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "11:08",
-        "expected_departure": "11:08",
+        "delay": -1,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "11:06",
+        "expected_departure": "11:06",
         "crowd_percentage": 5
       }
     ]
@@ -1197,11 +1197,11 @@
             "departure": "11:59"
           }
         ],
-        "delay": 2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "11:17",
-        "expected_departure": "11:19",
+        "delay": 4,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "11:26",
+        "expected_departure": "11:28",
         "crowd_percentage": 5
       },
       {
@@ -1254,9 +1254,9 @@
             "departure": "12:09"
           }
         ],
-        "delay": 6,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
+        "delay": -1,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
         "expected_arrival": "11:36",
         "expected_departure": "11:38",
         "crowd_percentage": 5
@@ -1316,11 +1316,11 @@
             "departure": "11:24"
           }
         ],
-        "delay": 0,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "10:40",
-        "expected_departure": "10:42",
+        "delay": 2,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "10:49",
+        "expected_departure": "10:51",
         "crowd_percentage": 5
       },
       {
@@ -1373,11 +1373,11 @@
             "departure": null
           }
         ],
-        "delay": 0,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "11:02",
-        "expected_departure": "11:02",
+        "delay": 7,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "11:14",
+        "expected_departure": "11:14",
         "crowd_percentage": 5
       }
     ]
@@ -1435,11 +1435,11 @@
             "departure": "11:59"
           }
         ],
-        "delay": 10,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "11:25",
-        "expected_departure": "11:27",
+        "delay": 4,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "11:26",
+        "expected_departure": "11:28",
         "crowd_percentage": 5
       },
       {
@@ -1492,11 +1492,11 @@
             "departure": "12:09"
           }
         ],
-        "delay": 0,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "11:30",
-        "expected_departure": "11:32",
+        "delay": 8,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "11:45",
+        "expected_departure": "11:47",
         "crowd_percentage": 5
       }
     ]
@@ -1554,11 +1554,11 @@
             "departure": "13:26"
           }
         ],
-        "delay": 5,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "12:47",
-        "expected_departure": "12:49",
+        "delay": 6,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "12:54",
+        "expected_departure": "12:56",
         "crowd_percentage": 5
       },
       {
@@ -1611,11 +1611,11 @@
             "departure": null
           }
         ],
-        "delay": 10,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "13:17",
-        "expected_departure": "13:17",
+        "delay": -2,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "13:10",
+        "expected_departure": "13:10",
         "crowd_percentage": 5
       }
     ]
@@ -1673,11 +1673,11 @@
             "departure": "13:58"
           }
         ],
-        "delay": 10,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "13:23",
-        "expected_departure": "13:25",
+        "delay": 5,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "13:25",
+        "expected_departure": "13:27",
         "crowd_percentage": 5
       },
       {
@@ -1730,11 +1730,11 @@
             "departure": "14:09"
           }
         ],
-        "delay": 0,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "13:30",
-        "expected_departure": "13:32",
+        "delay": 1,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "13:38",
+        "expected_departure": "13:40",
         "crowd_percentage": 5
       }
     ]
@@ -1792,11 +1792,11 @@
             "departure": "14:28"
           }
         ],
-        "delay": 2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "13:45",
-        "expected_departure": "13:47",
+        "delay": 5,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "13:55",
+        "expected_departure": "13:57",
         "crowd_percentage": 5
       },
       {
@@ -1849,11 +1849,11 @@
             "departure": null
           }
         ],
-        "delay": 8,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "14:15",
-        "expected_departure": "14:15",
+        "delay": 5,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "14:17",
+        "expected_departure": "14:17",
         "crowd_percentage": 5
       }
     ]
@@ -1911,11 +1911,11 @@
             "departure": "14:58"
           }
         ],
-        "delay": 0,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "14:13",
-        "expected_departure": "14:15",
+        "delay": 5,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "14:25",
+        "expected_departure": "14:27",
         "crowd_percentage": 5
       },
       {
@@ -1968,11 +1968,11 @@
             "departure": "15:09"
           }
         ],
-        "delay": -2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "14:28",
-        "expected_departure": "14:30",
+        "delay": 8,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "14:45",
+        "expected_departure": "14:47",
         "crowd_percentage": 5
       }
     ]
@@ -2030,11 +2030,11 @@
             "departure": "15:28"
           }
         ],
-        "delay": 1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "14:44",
-        "expected_departure": "14:46",
+        "delay": 5,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "14:55",
+        "expected_departure": "14:57",
         "crowd_percentage": 5
       },
       {
@@ -2087,11 +2087,11 @@
             "departure": null
           }
         ],
-        "delay": 4,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "15:11",
-        "expected_departure": "15:11",
+        "delay": 8,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "15:20",
+        "expected_departure": "15:20",
         "crowd_percentage": 5
       }
     ]
@@ -2149,11 +2149,11 @@
             "departure": "15:58"
           }
         ],
-        "delay": 10,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "15:23",
-        "expected_departure": "15:25",
+        "delay": 1,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "15:21",
+        "expected_departure": "15:23",
         "crowd_percentage": 5
       },
       {
@@ -2206,11 +2206,11 @@
             "departure": "16:09"
           }
         ],
-        "delay": 4,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "15:34",
-        "expected_departure": "15:36",
+        "delay": 8,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "15:45",
+        "expected_departure": "15:47",
         "crowd_percentage": 5
       }
     ]
@@ -2268,11 +2268,11 @@
             "departure": "16:28"
           }
         ],
-        "delay": 10,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "15:53",
-        "expected_departure": "15:55",
+        "delay": 8,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "15:58",
+        "expected_departure": "16:00",
         "crowd_percentage": 5
       },
       {
@@ -2325,11 +2325,11 @@
             "departure": null
           }
         ],
-        "delay": -2,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "16:05",
-        "expected_departure": "16:05",
+        "delay": 6,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "16:18",
+        "expected_departure": "16:18",
         "crowd_percentage": 5
       }
     ]
@@ -2387,11 +2387,11 @@
             "departure": "16:58"
           }
         ],
-        "delay": -1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "16:12",
-        "expected_departure": "16:14",
+        "delay": -2,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "16:18",
+        "expected_departure": "16:20",
         "crowd_percentage": 5
       },
       {
@@ -2445,10 +2445,10 @@
           }
         ],
         "delay": 8,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "16:38",
-        "expected_departure": "16:40",
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "16:45",
+        "expected_departure": "16:47",
         "crowd_percentage": 5
       }
     ]
@@ -2507,10 +2507,10 @@
           }
         ],
         "delay": -1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "16:42",
-        "expected_departure": "16:44",
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "16:49",
+        "expected_departure": "16:51",
         "crowd_percentage": 5
       },
       {
@@ -2563,9 +2563,247 @@
             "departure": null
           }
         ],
-        "delay": 7,
-        "current_station": "Belgharia",
-        "current_index": 3,
+        "delay": 5,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "17:17",
+        "expected_departure": "17:17",
+        "crowd_percentage": 5
+      }
+    ]
+  },
+  {
+    "slot": "17:00-17:29",
+    "trains": [
+      {
+        "train_no": 31459,
+        "train_name": "Sealdah - Naihati Local",
+        "stops": [
+          {
+            "station": "Sealdah",
+            "arrival": "17:05",
+            "departure": "17:08"
+          },
+          {
+            "station": "Bidhan Nagar Road",
+            "arrival": "17:13",
+            "departure": "17:15"
+          },
+          {
+            "station": "Dum Dum Junction",
+            "arrival": "17:20",
+            "departure": "17:22"
+          },
+          {
+            "station": "Belgharia",
+            "arrival": "17:26",
+            "departure": "17:28"
+          },
+          {
+            "station": "Agarpara",
+            "arrival": "17:32",
+            "departure": "17:34"
+          },
+          {
+            "station": "Sodepur",
+            "arrival": "17:38",
+            "departure": "17:40"
+          },
+          {
+            "station": "Khardaha",
+            "arrival": "17:44",
+            "departure": "17:46"
+          },
+          {
+            "station": "Titagarh",
+            "arrival": "17:50",
+            "departure": "17:51"
+          },
+          {
+            "station": "Barrackpore",
+            "arrival": "17:56",
+            "departure": "17:58"
+          }
+        ],
+        "delay": 3,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "17:23",
+        "expected_departure": "17:25",
+        "crowd_percentage": 5
+      },
+      {
+        "train_no": 31345,
+        "train_name": "Sealdah - Kalyani Simanta Local",
+        "stops": [
+          {
+            "station": "Sealdah",
+            "arrival": "17:20",
+            "departure": "17:25"
+          },
+          {
+            "station": "Bidhan Nagar Road",
+            "arrival": "17:30",
+            "departure": "17:32"
+          },
+          {
+            "station": "Dum Dum Junction",
+            "arrival": "17:37",
+            "departure": "17:39"
+          },
+          {
+            "station": "Belgharia",
+            "arrival": "17:42",
+            "departure": "17:44"
+          },
+          {
+            "station": "Agarpara",
+            "arrival": "17:48",
+            "departure": "17:50"
+          },
+          {
+            "station": "Sodepur",
+            "arrival": "17:53",
+            "departure": "17:55"
+          },
+          {
+            "station": "Khardaha",
+            "arrival": "17:58",
+            "departure": "18:00"
+          },
+          {
+            "station": "Titagarh",
+            "arrival": "18:03",
+            "departure": "18:04"
+          },
+          {
+            "station": "Barrackpore",
+            "arrival": "18:08",
+            "departure": "18:09"
+          }
+        ],
+        "delay": -1,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "17:36",
+        "expected_departure": "17:38",
+        "crowd_percentage": 5
+      }
+    ]
+  },
+  {
+    "slot": "16:30-16:59",
+    "trains": [
+      {
+        "train_no": 31458,
+        "train_name": "Sealdah - Barrackpore Local",
+        "stops": [
+          {
+            "station": "Sealdah",
+            "arrival": "16:35",
+            "departure": "16:38"
+          },
+          {
+            "station": "Bidhan Nagar Road",
+            "arrival": "16:43",
+            "departure": "16:45"
+          },
+          {
+            "station": "Dum Dum Junction",
+            "arrival": "16:50",
+            "departure": "16:52"
+          },
+          {
+            "station": "Belgharia",
+            "arrival": "16:56",
+            "departure": "16:58"
+          },
+          {
+            "station": "Agarpara",
+            "arrival": "17:02",
+            "departure": "17:04"
+          },
+          {
+            "station": "Sodepur",
+            "arrival": "17:08",
+            "departure": "17:10"
+          },
+          {
+            "station": "Khardaha",
+            "arrival": "17:14",
+            "departure": "17:16"
+          },
+          {
+            "station": "Titagarh",
+            "arrival": "17:20",
+            "departure": "17:21"
+          },
+          {
+            "station": "Barrackpore",
+            "arrival": "17:26",
+            "departure": "17:28"
+          }
+        ],
+        "delay": -2,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "16:48",
+        "expected_departure": "16:50",
+        "crowd_percentage": 5
+      },
+      {
+        "train_no": 31921,
+        "train_name": "Sealdah - Gede Local",
+        "stops": [
+          {
+            "station": "Sealdah",
+            "arrival": "16:50",
+            "departure": "16:50"
+          },
+          {
+            "station": "Bidhan Nagar Road",
+            "arrival": "16:57",
+            "departure": "16:57"
+          },
+          {
+            "station": "Dum Dum Junction",
+            "arrival": "17:02",
+            "departure": "17:02"
+          },
+          {
+            "station": "Belgharia",
+            "arrival": "17:07",
+            "departure": "17:07"
+          },
+          {
+            "station": "Sodepur",
+            "arrival": "17:12",
+            "departure": "17:12"
+          },
+          {
+            "station": "Khardaha",
+            "arrival": "17:17",
+            "departure": "17:17"
+          },
+          {
+            "station": "Barrackpore",
+            "arrival": "17:23",
+            "departure": "17:23"
+          },
+          {
+            "station": "Naihati",
+            "arrival": "17:29",
+            "departure": "17:29"
+          },
+          {
+            "station": "Gede",
+            "arrival": "18:40",
+            "departure": null
+          }
+        ],
+        "delay": 2,
+        "current_station": "Sodepur",
+        "current_index": 4,
         "expected_arrival": "17:14",
         "expected_departure": "17:14",
         "crowd_percentage": 5
@@ -2625,11 +2863,11 @@
             "departure": "17:58"
           }
         ],
-        "delay": 5,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "17:18",
-        "expected_departure": "17:20",
+        "delay": 7,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "17:27",
+        "expected_departure": "17:29",
         "crowd_percentage": 5
       },
       {
@@ -2682,249 +2920,11 @@
             "departure": "18:09"
           }
         ],
-        "delay": 0,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "17:30",
-        "expected_departure": "17:32",
-        "crowd_percentage": 5
-      }
-    ]
-  },
-  {
-    "slot": "16:30-16:59",
-    "trains": [
-      {
-        "train_no": 31458,
-        "train_name": "Sealdah - Barrackpore Local",
-        "stops": [
-          {
-            "station": "Sealdah",
-            "arrival": "16:35",
-            "departure": "16:38"
-          },
-          {
-            "station": "Bidhan Nagar Road",
-            "arrival": "16:43",
-            "departure": "16:45"
-          },
-          {
-            "station": "Dum Dum Junction",
-            "arrival": "16:50",
-            "departure": "16:52"
-          },
-          {
-            "station": "Belgharia",
-            "arrival": "16:56",
-            "departure": "16:58"
-          },
-          {
-            "station": "Agarpara",
-            "arrival": "17:02",
-            "departure": "17:04"
-          },
-          {
-            "station": "Sodepur",
-            "arrival": "17:08",
-            "departure": "17:10"
-          },
-          {
-            "station": "Khardaha",
-            "arrival": "17:14",
-            "departure": "17:16"
-          },
-          {
-            "station": "Titagarh",
-            "arrival": "17:20",
-            "departure": "17:21"
-          },
-          {
-            "station": "Barrackpore",
-            "arrival": "17:26",
-            "departure": "17:28"
-          }
-        ],
-        "delay": 10,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "16:53",
-        "expected_departure": "16:55",
-        "crowd_percentage": 5
-      },
-      {
-        "train_no": 31921,
-        "train_name": "Sealdah - Gede Local",
-        "stops": [
-          {
-            "station": "Sealdah",
-            "arrival": "16:50",
-            "departure": "16:50"
-          },
-          {
-            "station": "Bidhan Nagar Road",
-            "arrival": "16:57",
-            "departure": "16:57"
-          },
-          {
-            "station": "Dum Dum Junction",
-            "arrival": "17:02",
-            "departure": "17:02"
-          },
-          {
-            "station": "Belgharia",
-            "arrival": "17:07",
-            "departure": "17:07"
-          },
-          {
-            "station": "Sodepur",
-            "arrival": "17:12",
-            "departure": "17:12"
-          },
-          {
-            "station": "Khardaha",
-            "arrival": "17:17",
-            "departure": "17:17"
-          },
-          {
-            "station": "Barrackpore",
-            "arrival": "17:23",
-            "departure": "17:23"
-          },
-          {
-            "station": "Naihati",
-            "arrival": "17:29",
-            "departure": "17:29"
-          },
-          {
-            "station": "Gede",
-            "arrival": "18:40",
-            "departure": null
-          }
-        ],
-        "delay": -2,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "17:05",
-        "expected_departure": "17:05",
-        "crowd_percentage": 5
-      }
-    ]
-  },
-  {
-    "slot": "17:00-17:29",
-    "trains": [
-      {
-        "train_no": 31459,
-        "train_name": "Sealdah - Naihati Local",
-        "stops": [
-          {
-            "station": "Sealdah",
-            "arrival": "17:05",
-            "departure": "17:08"
-          },
-          {
-            "station": "Bidhan Nagar Road",
-            "arrival": "17:13",
-            "departure": "17:15"
-          },
-          {
-            "station": "Dum Dum Junction",
-            "arrival": "17:20",
-            "departure": "17:22"
-          },
-          {
-            "station": "Belgharia",
-            "arrival": "17:26",
-            "departure": "17:28"
-          },
-          {
-            "station": "Agarpara",
-            "arrival": "17:32",
-            "departure": "17:34"
-          },
-          {
-            "station": "Sodepur",
-            "arrival": "17:38",
-            "departure": "17:40"
-          },
-          {
-            "station": "Khardaha",
-            "arrival": "17:44",
-            "departure": "17:46"
-          },
-          {
-            "station": "Titagarh",
-            "arrival": "17:50",
-            "departure": "17:51"
-          },
-          {
-            "station": "Barrackpore",
-            "arrival": "17:56",
-            "departure": "17:58"
-          }
-        ],
-        "delay": 2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "17:15",
-        "expected_departure": "17:17",
-        "crowd_percentage": 5
-      },
-      {
-        "train_no": 31345,
-        "train_name": "Sealdah - Kalyani Simanta Local",
-        "stops": [
-          {
-            "station": "Sealdah",
-            "arrival": "17:20",
-            "departure": "17:25"
-          },
-          {
-            "station": "Bidhan Nagar Road",
-            "arrival": "17:30",
-            "departure": "17:32"
-          },
-          {
-            "station": "Dum Dum Junction",
-            "arrival": "17:37",
-            "departure": "17:39"
-          },
-          {
-            "station": "Belgharia",
-            "arrival": "17:42",
-            "departure": "17:44"
-          },
-          {
-            "station": "Agarpara",
-            "arrival": "17:48",
-            "departure": "17:50"
-          },
-          {
-            "station": "Sodepur",
-            "arrival": "17:53",
-            "departure": "17:55"
-          },
-          {
-            "station": "Khardaha",
-            "arrival": "17:58",
-            "departure": "18:00"
-          },
-          {
-            "station": "Titagarh",
-            "arrival": "18:03",
-            "departure": "18:04"
-          },
-          {
-            "station": "Barrackpore",
-            "arrival": "18:08",
-            "departure": "18:09"
-          }
-        ],
-        "delay": -1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "17:29",
-        "expected_departure": "17:31",
+        "delay": 7,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "17:44",
+        "expected_departure": "17:46",
         "crowd_percentage": 5
       }
     ]
@@ -2983,10 +2983,10 @@
           }
         ],
         "delay": -1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "18:42",
-        "expected_departure": "18:44",
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "18:49",
+        "expected_departure": "18:51",
         "crowd_percentage": 5
       },
       {
@@ -3039,11 +3039,11 @@
             "departure": null
           }
         ],
-        "delay": 0,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "19:07",
-        "expected_departure": "19:07",
+        "delay": -2,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "19:10",
+        "expected_departure": "19:10",
         "crowd_percentage": 5
       }
     ]
@@ -3101,11 +3101,11 @@
             "departure": "19:58"
           }
         ],
-        "delay": 7,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "19:20",
-        "expected_departure": "19:22",
+        "delay": 8,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "19:28",
+        "expected_departure": "19:30",
         "crowd_percentage": 5
       },
       {
@@ -3158,11 +3158,11 @@
             "departure": "20:09"
           }
         ],
-        "delay": 2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "19:32",
-        "expected_departure": "19:34",
+        "delay": 0,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "19:37",
+        "expected_departure": "19:39",
         "crowd_percentage": 5
       }
     ]
@@ -3220,11 +3220,11 @@
             "departure": "20:28"
           }
         ],
-        "delay": 2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "19:45",
-        "expected_departure": "19:47",
+        "delay": 4,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "19:54",
+        "expected_departure": "19:56",
         "crowd_percentage": 5
       },
       {
@@ -3277,11 +3277,11 @@
             "departure": null
           }
         ],
-        "delay": 9,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "20:16",
-        "expected_departure": "20:16",
+        "delay": 7,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "20:19",
+        "expected_departure": "20:19",
         "crowd_percentage": 5
       }
     ]
@@ -3339,11 +3339,11 @@
             "departure": "20:58"
           }
         ],
-        "delay": 4,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "20:17",
-        "expected_departure": "20:19",
+        "delay": -2,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "20:18",
+        "expected_departure": "20:20",
         "crowd_percentage": 5
       },
       {
@@ -3396,11 +3396,11 @@
             "departure": "21:09"
           }
         ],
-        "delay": 7,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "20:37",
-        "expected_departure": "20:39",
+        "delay": 4,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "20:41",
+        "expected_departure": "20:43",
         "crowd_percentage": 5
       }
     ]
@@ -3458,11 +3458,11 @@
             "departure": "21:28"
           }
         ],
-        "delay": 6,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "20:49",
-        "expected_departure": "20:51",
+        "delay": 4,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "20:54",
+        "expected_departure": "20:56",
         "crowd_percentage": 5
       },
       {
@@ -3515,11 +3515,11 @@
             "departure": null
           }
         ],
-        "delay": 3,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "21:10",
-        "expected_departure": "21:10",
+        "delay": 9,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "21:21",
+        "expected_departure": "21:21",
         "crowd_percentage": 5
       }
     ]
@@ -3577,11 +3577,11 @@
             "departure": "21:58"
           }
         ],
-        "delay": 9,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "21:22",
-        "expected_departure": "21:24",
+        "delay": 10,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "21:30",
+        "expected_departure": "21:32",
         "crowd_percentage": 5
       },
       {
@@ -3634,11 +3634,11 @@
             "departure": "22:09"
           }
         ],
-        "delay": 0,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "21:30",
-        "expected_departure": "21:32",
+        "delay": 4,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "21:41",
+        "expected_departure": "21:43",
         "crowd_percentage": 5
       }
     ]
@@ -3696,11 +3696,11 @@
             "departure": "22:28"
           }
         ],
-        "delay": -1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "21:42",
-        "expected_departure": "21:44",
+        "delay": 0,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "21:50",
+        "expected_departure": "21:52",
         "crowd_percentage": 5
       },
       {
@@ -3753,11 +3753,11 @@
             "departure": null
           }
         ],
-        "delay": 8,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "22:15",
-        "expected_departure": "22:15",
+        "delay": 7,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "22:19",
+        "expected_departure": "22:19",
         "crowd_percentage": 5
       }
     ]
@@ -3815,11 +3815,11 @@
             "departure": "22:58"
           }
         ],
-        "delay": 2,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "22:15",
-        "expected_departure": "22:17",
+        "delay": 9,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "22:29",
+        "expected_departure": "22:31",
         "crowd_percentage": 5
       },
       {
@@ -3872,9 +3872,9 @@
             "departure": "23:09"
           }
         ],
-        "delay": 9,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
+        "delay": 2,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
         "expected_arrival": "22:39",
         "expected_departure": "22:41",
         "crowd_percentage": 5
@@ -3934,11 +3934,11 @@
             "departure": "23:28"
           }
         ],
-        "delay": 10,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "22:53",
-        "expected_departure": "22:55",
+        "delay": 6,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "22:56",
+        "expected_departure": "22:58",
         "crowd_percentage": 5
       },
       {
@@ -3991,11 +3991,11 @@
             "departure": null
           }
         ],
-        "delay": 3,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "23:10",
-        "expected_departure": "23:10",
+        "delay": 4,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "23:16",
+        "expected_departure": "23:16",
         "crowd_percentage": 5
       }
     ]
@@ -4053,11 +4053,11 @@
             "departure": "23:58"
           }
         ],
-        "delay": 3,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "23:16",
-        "expected_departure": "23:18",
+        "delay": -1,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "23:19",
+        "expected_departure": "23:21",
         "crowd_percentage": 5
       },
       {
@@ -4110,11 +4110,11 @@
             "departure": "00:09"
           }
         ],
-        "delay": 1,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "23:31",
-        "expected_departure": "23:33",
+        "delay": 5,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "23:42",
+        "expected_departure": "23:44",
         "crowd_percentage": 5
       }
     ]
@@ -4172,11 +4172,11 @@
             "departure": "00:28"
           }
         ],
-        "delay": 6,
-        "current_station": "Bidhan Nagar Road",
-        "current_index": 1,
-        "expected_arrival": "23:49",
-        "expected_departure": "23:51",
+        "delay": 5,
+        "current_station": "Dum Dum Junction",
+        "current_index": 2,
+        "expected_arrival": "23:55",
+        "expected_departure": "23:57",
         "crowd_percentage": 5
       },
       {
@@ -4229,11 +4229,11 @@
             "departure": null
           }
         ],
-        "delay": 7,
-        "current_station": "Belgharia",
-        "current_index": 3,
-        "expected_arrival": "00:14",
-        "expected_departure": "00:14",
+        "delay": 1,
+        "current_station": "Sodepur",
+        "current_index": 4,
+        "expected_arrival": "00:13",
+        "expected_departure": "00:13",
         "crowd_percentage": 5
       }
     ]

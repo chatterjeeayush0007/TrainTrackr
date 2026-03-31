@@ -110,48 +110,27 @@
         "train_no": 31438,
         "train_name": "Naihati - Sealdah Local",
         "stops": [
-          {
-            "station": "Naihati",
-            "arrival": "06:35",
-            "departure": "06:37"
-          },
-          {
-            "station": "Kankinara",
-            "arrival": "06:41",
-            "departure": "06:42"
-          },
-          {
-            "station": "Shyamnagar",
-            "arrival": "06:45",
-            "departure": "06:46"
-          },
-          {
-            "station": "Ichhapur",
-            "arrival": "06:50",
-            "departure": "06:51"
-          },
-          {
-            "station": "Palta",
-            "arrival": "06:54",
-            "departure": "06:55"
-          },
-          {
-            "station": "Barrackpore",
-            "arrival": "06:58",
-            "departure": "07:00"
-          },
-          {
-            "station": "Titagarh",
-            "arrival": "07:05",
-            "departure": "07:06"
-          }
+          { "station": "Naihati", "arrival": "06:35", "departure": "06:37" },
+          { "station": "Kankinara", "arrival": "06:41", "departure": "06:42" },
+          { "station": "Shyamnagar", "arrival": "06:45", "departure": "06:46" },
+          { "station": "Ichhapur", "arrival": "06:50", "departure": "06:51" },
+          { "station": "Palta", "arrival": "06:54", "departure": "06:55" },
+          { "station": "Barrackpore", "arrival": "06:58", "departure": "07:00" },
+          { "station": "Titagarh", "arrival": "07:05", "departure": "07:06" },
+          { "station": "Khardaha", "arrival": "07:09", "departure": "07:10" },
+          { "station": "Sodepur", "arrival": "07:14", "departure": "07:15" },
+          { "station": "Agarpara", "arrival": "07:18", "departure": "07:19" },
+          { "station": "Belgharia", "arrival": "07:22", "departure": "07:23" },
+          { "station": "Dum Dum Junction", "arrival": "07:28", "departure": "07:30" },
+          { "station": "Bidhan Nagar Road", "arrival": "07:34", "departure": "07:35" },
+          { "station": "Sealdah", "arrival": "07:45", "departure": null }
         ],
         "delay": 7,
         "current_station": "Barrackpore",
         "current_index": 5,
         "expected_arrival": "07:05",
         "expected_departure": "07:07",
-        "crowd_percentage": 5
+        "crowd_percentage": 65
       },
       {
         "train_no": 31316,
@@ -516,58 +495,33 @@
         "train_no": 31336,
         "train_name": "Sealdah - Kalyani Simanta Local",
         "stops": [
-          {
-            "station": "Sealdah",
-            "arrival": "08:20",
-            "departure": "08:25"
-          },
-          {
-            "station": "Bidhan Nagar Road",
-            "arrival": "08:30",
-            "departure": "08:32"
-          },
-          {
-            "station": "Dum Dum Junction",
-            "arrival": "08:37",
-            "departure": "08:39"
-          },
-          {
-            "station": "Belgharia",
-            "arrival": "08:42",
-            "departure": "08:44"
-          },
-          {
-            "station": "Agarpara",
-            "arrival": "08:48",
-            "departure": "08:50"
-          },
-          {
-            "station": "Sodepur",
-            "arrival": "08:53",
-            "departure": "08:55"
-          },
-          {
-            "station": "Khardaha",
-            "arrival": "08:58",
-            "departure": "09:00"
-          },
-          {
-            "station": "Titagarh",
-            "arrival": "09:03",
-            "departure": "09:04"
-          },
-          {
-            "station": "Barrackpore",
-            "arrival": "09:08",
-            "departure": "09:09"
-          }
+          { "station": "Sealdah", "arrival": "08:20", "departure": "08:25" },
+          { "station": "Bidhan Nagar Road", "arrival": "08:30", "departure": "08:32" },
+          { "station": "Dum Dum Junction", "arrival": "08:37", "departure": "08:39" },
+          { "station": "Belgharia", "arrival": "08:42", "departure": "08:44" },
+          { "station": "Agarpara", "arrival": "08:48", "departure": "08:50" },
+          { "station": "Sodepur", "arrival": "08:53", "departure": "08:55" },
+          { "station": "Khardaha", "arrival": "08:58", "departure": "09:00" },
+          { "station": "Titagarh", "arrival": "09:03", "departure": "09:04" },
+          { "station": "Barrackpore", "arrival": "09:08", "departure": "09:09" },
+          { "station": "Palta", "arrival": "09:13", "departure": "09:14" },
+          { "station": "Ichhapur", "arrival": "09:17", "departure": "09:18" },
+          { "station": "Shyamnagar", "arrival": "09:22", "departure": "09:23" },
+          { "station": "Kankinara", "arrival": "09:27", "departure": "09:28" },
+          { "station": "Naihati", "arrival": "09:35", "departure": "09:37" },
+          { "station": "Halisahar", "arrival": "09:41", "departure": "09:42" },
+          { "station": "Kanchrapara", "arrival": "09:46", "departure": "09:47" },
+          { "station": "Kalyani", "arrival": "09:51", "departure": "09:52" },
+          { "station": "Kalyani Silpanchal", "arrival": "09:56", "departure": "09:57" },
+          { "station": "Kalyani Ghoshpara", "arrival": "10:00", "departure": "10:01" },
+          { "station": "Kalyani Simanta", "arrival": "10:08", "departure": null }
         ],
         "delay": 6,
         "current_station": "Dum Dum Junction",
         "current_index": 2,
         "expected_arrival": "08:43",
         "expected_departure": "08:45",
-        "crowd_percentage": 5
+        "crowd_percentage": 50
       }
     ]
   },
@@ -956,58 +910,27 @@
         "train_no": 31445,
         "train_name": "Sealdah - Naihati Local",
         "stops": [
-          {
-            "station": "Sealdah",
-            "arrival": "10:05",
-            "departure": "10:10"
-          },
-          {
-            "station": "Bidhan Nagar Road",
-            "arrival": "10:15",
-            "departure": "10:17"
-          },
-          {
-            "station": "Dum Dum Junction",
-            "arrival": "10:22",
-            "departure": "10:24"
-          },
-          {
-            "station": "Belgharia",
-            "arrival": "10:28",
-            "departure": "10:30"
-          },
-          {
-            "station": "Agarpara",
-            "arrival": "10:35",
-            "departure": "10:37"
-          },
-          {
-            "station": "Sodepur",
-            "arrival": "10:41",
-            "departure": "10:43"
-          },
-          {
-            "station": "Khardaha",
-            "arrival": "10:47",
-            "departure": "10:49"
-          },
-          {
-            "station": "Titagarh",
-            "arrival": "10:53",
-            "departure": "10:54"
-          },
-          {
-            "station": "Barrackpore",
-            "arrival": "10:58",
-            "departure": "10:59"
-          }
+          { "station": "Sealdah", "arrival": "10:05", "departure": "10:10" },
+          { "station": "Bidhan Nagar Road", "arrival": "10:15", "departure": "10:17" },
+          { "station": "Dum Dum Junction", "arrival": "10:22", "departure": "10:24" },
+          { "station": "Belgharia", "arrival": "10:28", "departure": "10:30" },
+          { "station": "Agarpara", "arrival": "10:35", "departure": "10:37" },
+          { "station": "Sodepur", "arrival": "10:41", "departure": "10:43" },
+          { "station": "Khardaha", "arrival": "10:47", "departure": "10:49" },
+          { "station": "Titagarh", "arrival": "10:53", "departure": "10:54" },
+          { "station": "Barrackpore", "arrival": "10:58", "departure": "10:59" },
+          { "station": "Palta", "arrival": "11:04", "departure": "11:05" },
+          { "station": "Ichhapur", "arrival": "11:08", "departure": "11:09" },
+          { "station": "Shyamnagar", "arrival": "11:13", "departure": "11:14" },
+          { "station": "Kankinara", "arrival": "11:18", "departure": "11:19" },
+          { "station": "Naihati", "arrival": "11:26", "departure": null }
         ],
         "delay": 10,
         "current_station": "Dum Dum Junction",
         "current_index": 2,
         "expected_arrival": "10:32",
         "expected_departure": "10:34",
-        "crowd_percentage": 5
+        "crowd_percentage": 55
       },
       {
         "train_no": 31338,
